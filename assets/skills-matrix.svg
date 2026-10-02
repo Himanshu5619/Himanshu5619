@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 370" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', 'Courier New', monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
+      .pill { rx: 5; fill: #161B22; stroke: #30363D; stroke-width: 1; }
+      .pill-text { fill: #E6EDF3; font-size: 11px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+      .cat-title { fill: #93C5FD; font-size: 12px; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+      .cmd-text { fill: #8B949E; font-size: 12.5px; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="958" height="368" rx="10" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <!-- Terminal Header Bar -->
+  <path d="M 1 11 Q 1 1 11 1 L 949 1 Q 959 1 959 11 L 959 38 L 1 38 Z" fill="#161B22"/>
+  <line x1="1" y1="38" x2="959" y2="38" stroke="#30363D" stroke-width="1"/>
+
+  <!-- Controls -->
+  <circle cx="20" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="36" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="52" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Command Title -->
+  <text x="74" y="23" class="cmd-text">himanshu@dev:~$ <tspan fill="#F0F6FC" font-weight="700">./skills --list</tspan></text>
+  <text x="940" y="23" text-anchor="end" fill="#8B949E" font-size="11" font-weight="600" class="font-mono">[ TECH STACK MATRIX ]</text>
+
+  <!-- ==================== CATEGORY 1: CLOUD COMPUTING ==================== -->
+  <g transform="translate(24, 60)">
+    <text x="0" y="12" class="cat-title">☁️ CLOUD COMPUTING</text>
+    <!-- Pills Row -->
+    <g transform="translate(0, 22)">
+      <!-- AWS -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="80" height="28" class="pill"/>
+        <text x="40" y="18" text-anchor="middle" class="pill-text">AWS</text>
+      </g>
+      <!-- Azure -->
+      <g transform="translate(90, 0)">
+        <rect x="0" y="0" width="130" height="28" class="pill"/>
+        <text x="65" y="18" text-anchor="middle" class="pill-text">Microsoft Azure</text>
+      </g>
+      <!-- Google Cloud -->
+      <g transform="translate(230, 0)">
+        <rect x="0" y="0" width="120" height="28" class="pill"/>
+        <text x="60" y="18" text-anchor="middle" class="pill-text">Google Cloud</text>
+      </g>
+      <!-- Cloud Architecture -->
+      <g transform="translate(360, 0)">
+        <rect x="0" y="0" width="150" height="28" class="pill"/>
+        <text x="75" y="18" text-anchor="middle" class="pill-text">Cloud Architecture</text>
+      </g>
+      <!-- Multi-cloud Infrastructure -->
+      <g transform="translate(520, 0)">
+        <rect x="0" y="0" width="190" height="28" class="pill"/>
+        <text x="95" y="18" text-anchor="middle" class="pill-text">Multi-cloud Infrastructure</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Divider 1 -->
+  <line x1="24" y1="120" x2="936" y2="120" stroke="#21262D" stroke-width="1"/>
+
+  <!-- ==================== CATEGORY 2: DEVOPS & AUTOMATION ==================== -->
+  <g transform="translate(24, 134)">
+    <text x="0" y="12" class="cat-title">⚙️ DEVOPS &amp; AUTOMATION</text>
+    <g transform="translate(0, 22)">
+      <!-- Docker -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="86" height="28" class="pill"/>
+        <text x="43" y="18" text-anchor="middle" class="pill-text">Docker</text>
+      </g>
+      <!-- Kubernetes -->
+      <g transform="translate(96, 0)">
+        <rect x="0" y="0" width="105" height="28" class="pill"/>
+        <text x="52" y="18" text-anchor="middle" class="pill-text">Kubernetes</text>
+      </g>
+      <!-- Terraform -->
+      <g transform="translate(211, 0)">
+        <rect x="0" y="0" width="96" height="28" class="pill"/>
+        <text x="48" y="18" text-anchor="middle" class="pill-text">Terraform</text>
+      </g>
+      <!-- CI/CD -->
+      <g transform="translate(317, 0)">
+        <rect x="0" y="0" width="76" height="28" class="pill"/>
+        <text x="38" y="18" text-anchor="middle" class="pill-text">CI/CD</text>
+      </g>
+      <!-- GitHub Actions -->
+      <g transform="translate(403, 0)">
+        <rect x="0" y="0" width="134" height="28" class="pill"/>
+        <text x="67" y="18" text-anchor="middle" class="pill-text">GitHub Actions</text>
+      </g>
+      <!-- Jenkins -->
+      <g transform="translate(547, 0)">
+        <rect x="0" y="0" width="84" height="28" class="pill"/>
+        <text x="42" y="18" text-anchor="middle" class="pill-text">Jenkins</text>
+      </g>
+      <!-- IaC -->
+      <g transform="translate(641, 0)">
+        <rect x="0" y="0" width="180" height="28" class="pill"/>
+        <text x="90" y="18" text-anchor="middle" class="pill-text">Infrastructure as Code</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Divider 2 -->
+  <line x1="24" y1="194" x2="936" y2="194" stroke="#21262D" stroke-width="1"/>
+
+  <!-- ==================== CATEGORY 3: PROGRAMMING & DEVELOPMENT ==================== -->
+  <g transform="translate(24, 208)">
+    <text x="0" y="12" class="cat-title">💻 PROGRAMMING &amp; DEVELOPMENT</text>
+    <g transform="translate(0, 22)">
+      <!-- Python -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="82" height="28" class="pill"/>
+        <text x="41" y="18" text-anchor="middle" class="pill-text">Python</text>
+      </g>
+      <!-- JavaScript -->
+      <g transform="translate(92, 0)">
+        <rect x="0" y="0" width="102" height="28" class="pill"/>
+        <text x="51" y="18" text-anchor="middle" class="pill-text">JavaScript</text>
+      </g>
+      <!-- TypeScript -->
+      <g transform="translate(204, 0)">
+        <rect x="0" y="0" width="104" height="28" class="pill"/>
+        <text x="52" y="18" text-anchor="middle" class="pill-text">TypeScript</text>
+      </g>
+      <!-- React -->
+      <g transform="translate(318, 0)">
+        <rect x="0" y="0" width="76" height="28" class="pill"/>
+        <text x="38" y="18" text-anchor="middle" class="pill-text">React</text>
+      </g>
+      <!-- Node.js -->
+      <g transform="translate(404, 0)">
+        <rect x="0" y="0" width="86" height="28" class="pill"/>
+        <text x="43" y="18" text-anchor="middle" class="pill-text">Node.js</text>
+      </g>
+      <!-- C / C++ -->
+      <g transform="translate(500, 0)">
+        <rect x="0" y="0" width="86" height="28" class="pill"/>
+        <text x="43" y="18" text-anchor="middle" class="pill-text">C / C++</text>
+      </g>
+      <!-- Java -->
+      <g transform="translate(596, 0)">
+        <rect x="0" y="0" width="70" height="28" class="pill"/>
+        <text x="35" y="18" text-anchor="middle" class="pill-text">Java</text>
+      </g>
+      <!-- HTML / CSS -->
+      <g transform="translate(676, 0)">
+        <rect x="0" y="0" width="108" height="28" class="pill"/>
+        <text x="54" y="18" text-anchor="middle" class="pill-text">HTML &amp; CSS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Divider 3 -->
+  <line x1="24" y1="268" x2="936" y2="268" stroke="#21262D" stroke-width="1"/>
+
+  <!-- ==================== SPLIT ROW: MONITORING (LEFT) & BACKEND/DB (RIGHT) ==================== -->
+  <!-- Monitoring & Observability -->
+  <g transform="translate(24, 282)">
+    <text x="0" y="12" class="cat-title">📊 MONITORING &amp; OBSERVABILITY</text>
+    <g transform="translate(0, 22)">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="104" height="28" class="pill"/>
+        <text x="52" y="18" text-anchor="middle" class="pill-text">Prometheus</text>
+      </g>
+      <g transform="translate(114, 0)">
+        <rect x="0" y="0" width="84" height="28" class="pill"/>
+        <text x="42" y="18" text-anchor="middle" class="pill-text">Grafana</text>
+      </g>
+      <g transform="translate(208, 0)">
+        <rect x="0" y="0" width="100" height="28" class="pill"/>
+        <text x="50" y="18" text-anchor="middle" class="pill-text">CloudWatch</text>
+      </g>
+      <g transform="translate(318, 0)">
+        <rect x="0" y="0" width="136" height="28" class="pill"/>
+        <text x="68" y="18" text-anchor="middle" class="pill-text">System Metrics</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Database & Backend -->
+  <g transform="translate(500, 282)">
+    <text x="0" y="12" class="cat-title">🗄️ DATABASE &amp; BACKEND</text>
+    <g transform="translate(0, 22)">
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="104" height="28" class="pill"/>
+        <text x="52" y="18" text-anchor="middle" class="pill-text">PostgreSQL</text>
+      </g>
+      <g transform="translate(114, 0)">
+        <rect x="0" y="0" width="94" height="28" class="pill"/>
+        <text x="47" y="18" text-anchor="middle" class="pill-text">Supabase</text>
+      </g>
+      <g transform="translate(218, 0)">
+        <rect x="0" y="0" width="76" height="28" class="pill"/>
+        <text x="38" y="18" text-anchor="middle" class="pill-text">Prisma</text>
+      </g>
+      <g transform="translate(304, 0)">
+        <rect x="0" y="0" width="100" height="28" class="pill"/>
+        <text x="50" y="18" text-anchor="middle" class="pill-text">REST APIs</text>
+      </g>
+    </g>
+  </g>
+</svg>

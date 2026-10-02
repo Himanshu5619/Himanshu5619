@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', 'Courier New', monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      .cursor { animation: blink 1s infinite steps(1); }
+      .text-glow { text-shadow: 0 0 12px rgba(255, 255, 255, 0.35); }
+    </style>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#93C5FD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Terminal Window Background -->
+  <rect x="0" y="0" width="600" height="440" rx="10" fill="#111111" stroke="#333333" stroke-width="1.5"/>
+
+  <!-- Terminal Header Bar -->
+  <path d="M 0 10 Q 0 0 10 0 L 590 0 Q 600 0 600 10 L 600 38 L 0 38 Z" fill="#181818"/>
+  <line x1="0" y1="38" x2="600" y2="38" stroke="#262626" stroke-width="1"/>
+
+  <!-- Window Controls -->
+  <circle cx="20" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="36" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="52" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Terminal Title & Status -->
+  <text x="74" y="23" fill="#D4D4D4" font-size="12" font-weight="600" class="font-mono">himanshu@dev:~</text>
+  <text x="580" y="23" text-anchor="end" fill="#888888" font-size="10.5" font-weight="600" class="font-mono">SYSTEM STATUS: <tspan fill="#34D399" font-weight="700">ONLINE ●</tspan></text>
+
+  <!-- Body Content -->
+  <!-- Command Prompt -->
+  <g transform="translate(24, 62)">
+    <text x="0" y="0" fill="#888888" font-size="12" font-weight="600" class="font-mono">himanshu@dev:~$ <tspan fill="#FFFFFF" font-weight="700">cat about.md</tspan></text>
+  </g>
+
+  <!-- Greeting & Name -->
+  <g transform="translate(24, 94)">
+    <text x="0" y="0" fill="#888888" font-size="14" font-weight="700" class="font-sans">Hi, I'm</text>
+    <text x="0" y="25" fill="url(#titleGrad)" font-size="24" font-weight="900" letter-spacing="1" class="font-sans text-glow">HIMANSHU SINGH</text>
+    <rect x="236" y="7" width="10" height="20" fill="#FFFFFF" class="cursor"/>
+    <text x="0" y="44" fill="#A3A3A3" font-size="11" font-weight="500" class="font-mono">Cloud Computing | DevOps | Automation | Full-Stack Development</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="24" y1="152" x2="576" y2="152" stroke="#262626" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Terminal Key-Value Metadata -->
+  <g transform="translate(24, 178)" class="font-mono" font-size="11.5">
+    <!-- Row 1 -->
+    <text x="0" y="0" fill="#666666" font-weight="700">NAME</text>
+    <text x="95" y="0" fill="#888888">:</text>
+    <text x="110" y="0" fill="#FFFFFF" font-weight="600">Himanshu Singh</text>
+
+    <text x="310" y="0" fill="#666666" font-weight="700">LOCATION</text>
+    <text x="385" y="0" fill="#888888">:</text>
+    <text x="400" y="0" fill="#FFFFFF">India</text>
+
+    <!-- Row 2 -->
+    <text x="0" y="24" fill="#666666" font-weight="700">EDUCATION</text>
+    <text x="95" y="24" fill="#888888">:</text>
+    <text x="110" y="24" fill="#E2E8F0">B.Tech CSE (CCVT)</text>
+
+    <text x="310" y="24" fill="#666666" font-weight="700">STATUS</text>
+    <text x="385" y="24" fill="#888888">:</text>
+    <text x="400" y="24" fill="#93C5FD" font-weight="600">Building | Learning</text>
+
+    <!-- Row 3 -->
+    <text x="0" y="48" fill="#666666" font-weight="700">UNIVERSITY</text>
+    <text x="95" y="48" fill="#888888">:</text>
+    <text x="110" y="48" fill="#CCCCCC">UPES, Dehradun</text>
+
+    <!-- Row 4: Multi-line Roles -->
+    <text x="0" y="76" fill="#666666" font-weight="700">ROLE</text>
+    <text x="95" y="76" fill="#888888">:</text>
+    <text x="110" y="76" fill="#FFFFFF">Cloud Computing Enthusiast • DevOps &amp; Automation</text>
+    <text x="110" y="94" fill="#94A3B8">Full-Stack Web &amp; Microservices Developer</text>
+
+    <!-- Row 5: Focus -->
+    <text x="0" y="120" fill="#666666" font-weight="700">FOCUS</text>
+    <text x="95" y="120" fill="#888888">:</text>
+    <text x="110" y="120" fill="#FFFFFF">Cloud Infrastructure • Infrastructure as Code (IaC)</text>
+    <text x="110" y="138" fill="#94A3B8">CI/CD Automation • Scalable Multi-Cloud Architecture</text>
+
+    <!-- Row 6: Mission Quote -->
+    <text x="0" y="166" fill="#666666" font-weight="700">MISSION</text>
+    <text x="95" y="166" fill="#888888">:</text>
+    <text x="110" y="166" fill="#E2E8F0" font-style="italic">"Build scalable, reliable and automated solutions</text>
+    <text x="110" y="184" fill="#E2E8F0" font-style="italic">— one commit at a time."</text>
+  </g>
+
+  <!-- Bottom Terminal Status Bar -->
+  <line x1="0" y1="396" x2="600" y2="396" stroke="#222222" stroke-width="1"/>
+  <path d="M 0 396 L 600 396 L 600 430 Q 600 440 590 440 L 10 440 Q 0 440 0 430 Z" fill="#141414"/>
+  <text x="24" y="422" fill="#777777" font-size="10.5" font-weight="600" class="font-mono">UTF-8  |  [about.md]  |  18 lines, 512B  |  READY_</text>
+  <rect x="506" y="408" width="70" height="20" rx="4" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+  <text x="541" y="422" text-anchor="middle" fill="#93C5FD" font-size="9.5" font-weight="700" class="font-mono">VERIFIED ✓</text>
+</svg>

@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 320" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D20"/>
+      <stop offset="50%" stop-color="#0C1533"/>
+      <stop offset="100%" stop-color="#101D40"/>
+    </linearGradient>
+    
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D5FF"/>
+      <stop offset="50%" stop-color="#9457FF"/>
+      <stop offset="100%" stop-color="#E34DDB"/>
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D5FF"/>
+      <stop offset="100%" stop-color="#1685FF"/>
+    </linearGradient>
+
+    <linearGradient id="avatarGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D5FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#9457FF" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glowPink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .font-mono { font-family: 'Fira Code', 'Courier New', monospace; }
+      .font-sans { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+      
+      @keyframes blinkRec {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.2; }
+      }
+      @keyframes floatCard {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      .rec-dot { animation: blinkRec 1.4s infinite ease-in-out; }
+      .float-box { animation: floatCard 4s infinite ease-in-out; }
+      .pulse-line { animation: pulseGlow 3s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <!-- Card Background -->
+  <rect x="2" y="2" width="876" height="316" rx="18" fill="url(#bgGrad)" stroke="#253560" stroke-width="1.5"/>
+
+  <!-- Subtle Cyber Grid Background -->
+  <g opacity="0.08" stroke="#00D5FF" stroke-width="1">
+    <line x1="40" y1="0" x2="40" y2="320"/>
+    <line x1="120" y1="0" x2="120" y2="320"/>
+    <line x1="200" y1="0" x2="200" y2="320"/>
+    <line x1="280" y1="0" x2="280" y2="320"/>
+    <line x1="360" y1="0" x2="360" y2="320"/>
+    <line x1="440" y1="0" x2="440" y2="320"/>
+    <line x1="520" y1="0" x2="520" y2="320"/>
+    <line x1="600" y1="0" x2="600" y2="320"/>
+    <line x1="680" y1="0" x2="680" y2="320"/>
+    <line x1="760" y1="0" x2="760" y2="320"/>
+    <line x1="840" y1="0" x2="840" y2="320"/>
+    <line x1="0" y1="40" x2="880" y2="40"/>
+    <line x1="0" y1="100" x2="880" y2="100"/>
+    <line x1="0" y1="160" x2="880" y2="160"/>
+    <line x1="0" y1="220" x2="880" y2="220"/>
+    <line x1="0" y1="280" x2="880" y2="280"/>
+  </g>
+
+  <!-- Ambient Light Blurs -->
+  <circle cx="120" cy="80" r="140" fill="#00D5FF" opacity="0.06" filter="url(#glowCyan)"/>
+  <circle cx="760" cy="160" r="160" fill="#9457FF" opacity="0.08" filter="url(#glowPink)"/>
+
+  <!-- Left Content Area -->
+  <g transform="translate(45, 45)">
+    <!-- Pill: Open to Collabs -->
+    <g>
+      <rect x="0" y="0" width="168" height="28" rx="14" fill="#0A1835" stroke="#1D4A77" stroke-width="1.2"/>
+      <circle cx="16" cy="14" r="4.5" fill="#26D7B5" class="rec-dot"/>
+      <text x="30" y="19" fill="#00D5FF" font-size="11.5" font-weight="700" letter-spacing="1" class="font-sans">OPEN TO COLLABS</text>
+    </g>
+
+    <!-- Greeting -->
+    <text x="0" y="62" fill="#A7B6D8" font-size="16" font-weight="500" class="font-sans">Hi there, I'm</text>
+
+    <!-- Name with Gradient -->
+    <text x="0" y="104" fill="url(#nameGrad)" font-size="40" font-weight="900" letter-spacing="-0.5" class="font-sans">Himanshu Singh</text>
+
+    <!-- Subtitle Monospace -->
+    <g transform="translate(0, 126)">
+      <text x="0" y="0" fill="#00D5FF" font-size="15" font-weight="600" class="font-mono">&gt; Cloud Architect &amp; DevOps Explorer</text>
+    </g>
+
+    <!-- Description -->
+    <text x="0" y="152" fill="#A7B6D8" font-size="13.5" font-weight="400" class="font-sans">Crafting resilient multi-cloud architectures, automated CI/CD pipelines,</text>
+    <text x="0" y="172" fill="#A7B6D8" font-size="13.5" font-weight="400" class="font-sans">and scalable container infrastructure with Terraform, Docker &amp; AWS.</text>
+
+    <!-- Location & Repos Pill -->
+    <g transform="translate(0, 202)">
+      <rect x="0" y="0" width="310" height="26" rx="13" fill="#0E1A38" stroke="#253560" stroke-width="1"/>
+      <text x="14" y="17" fill="#7284AC" font-size="11.5" font-weight="500" class="font-sans">📍 India   •   29 Repositories   •   Cloud Native</text>
+    </g>
+  </g>
+
+  <!-- Right Visual / Viewfinder Mascot Area -->
+  <g transform="translate(620, 25)" class="float-box">
+    <!-- Camera Viewfinder Frame -->
+    <g stroke="#00D5FF" stroke-width="1.8" opacity="0.8">
+      <!-- Top Left -->
+      <path d="M 15 35 L 15 15 L 35 15" fill="none"/>
+      <!-- Top Right -->
+      <path d="M 195 15 L 215 15 L 215 35" fill="none"/>
+      <!-- Bottom Left -->
+      <path d="M 15 235 L 15 255 L 35 255" fill="none"/>
+      <!-- Bottom Right -->
+      <path d="M 195 255 L 215 255 L 215 235" fill="none"/>
+    </g>
+
+    <!-- Recording Indicator -->
+    <g transform="translate(25, 275)">
+      <circle cx="6" cy="0" r="4.5" fill="#E34DDB" class="rec-dot"/>
+      <text x="16" y="4" fill="#A7B6D8" font-size="10.5" font-weight="700" letter-spacing="1" class="font-mono">REC ● LIVE</text>
+      <text x="135" y="4" fill="#7284AC" font-size="10" class="font-mono">#CLOUD-DEV</text>
+    </g>
+
+    <!-- Mascot Speech Bubble -->
+    <g transform="translate(130, 25)">
+      <rect x="0" y="0" width="70" height="26" rx="8" fill="#101D40" stroke="#00D5FF" stroke-width="1"/>
+      <path d="M 15 26 L 10 33 L 25 26 Z" fill="#101D40"/>
+      <text x="12" y="17" fill="#00D5FF" font-size="12" font-weight="700" class="font-mono">hiii! 👋</text>
+    </g>
+
+    <!-- Futuristic Developer Avatar Illustration -->
+    <!-- Ambient Circle Backdrop -->
+    <circle cx="115" cy="135" r="75" fill="url(#avatarGlow)" stroke="#253560" stroke-width="1.5"/>
+
+    <!-- Avatar Character (Cloud Developer Chibi/Cyber aesthetic) -->
+    <g transform="translate(55, 60)">
+      <!-- Shoulders / Hoodie -->
+      <path d="M 20 120 C 20 85 45 78 60 78 C 75 78 100 85 100 120 Z" fill="#14234A" stroke="#293D72" stroke-width="1.5"/>
+      <!-- Hoodie Inner Collar / Shirt -->
+      <path d="M 46 80 L 60 102 L 74 80 Z" fill="#00D5FF" opacity="0.8"/>
+      <!-- Head / Face -->
+      <ellipse cx="60" cy="55" rx="30" ry="32" fill="#FCE2D4"/>
+      <!-- Dark Hair -->
+      <path d="M 30 50 C 30 25 45 15 60 15 C 75 15 90 25 90 50 C 85 35 70 30 60 30 C 50 30 35 35 30 50 Z" fill="#1B1C2E"/>
+      <path d="M 30 45 Q 26 65 32 70 Q 36 60 34 50 Z" fill="#1B1C2E"/>
+      <path d="M 90 45 Q 94 65 88 70 Q 84 60 86 50 Z" fill="#1B1C2E"/>
+      <!-- Cute Glasses -->
+      <rect x="40" y="48" width="16" height="12" rx="3" fill="none" stroke="#00D5FF" stroke-width="2"/>
+      <rect x="64" y="48" width="16" height="12" rx="3" fill="none" stroke="#00D5FF" stroke-width="2"/>
+      <line x1="56" y1="54" x2="64" y2="54" stroke="#00D5FF" stroke-width="2"/>
+      <!-- Cute Smile -->
+      <path d="M 54 68 Q 60 73 66 68" fill="none" stroke="#4A342B" stroke-width="1.8" stroke-linecap="round"/>
+      <!-- Blush -->
+      <ellipse cx="42" cy="62" rx="4" ry="2" fill="#FF8BA7" opacity="0.7"/>
+      <ellipse cx="78" cy="62" rx="4" ry="2" fill="#FF8BA7" opacity="0.7"/>
+      <!-- Glowing Headset -->
+      <path d="M 30 52 C 28 30 42 16 60 16 C 78 16 92 30 90 52" fill="none" stroke="#9457FF" stroke-width="3" stroke-linecap="round"/>
+      <rect x="25" y="45" width="8" height="16" rx="4" fill="#9457FF"/>
+      <rect x="87" y="45" width="8" height="16" rx="4" fill="#9457FF"/>
+      <!-- Laptop in Front -->
+      <path d="M 35 125 L 85 125 L 90 140 L 30 140 Z" fill="#0A1835" stroke="#00D5FF" stroke-width="1.2"/>
+      <!-- Glowing Apple / Terminal Logo on Laptop -->
+      <circle cx="60" cy="133" r="3.5" fill="#00D5FF" filter="url(#glowCyan)"/>
+    </g>
+  </g>
+</svg>

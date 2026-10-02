@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="orbitBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D20"/>
+      <stop offset="60%" stop-color="#0C1533"/>
+      <stop offset="100%" stop-color="#101D40"/>
+    </linearGradient>
+
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E34DDB"/>
+      <stop offset="40%" stop-color="#9457FF"/>
+      <stop offset="80%" stop-color="#00D5FF"/>
+      <stop offset="100%" stop-color="#080D20" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="orbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D5FF"/>
+      <stop offset="100%" stop-color="#9457FF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      .font-mono { font-family: 'Fira Code', 'Courier New', monospace; }
+      .font-sans { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+      
+      @keyframes orbitRotate1 {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes orbitRotate2 {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(-360deg); }
+      }
+      @keyframes corePulse {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.08); opacity: 1; }
+      }
+      .orbit-ring-1 { transform-origin: 200px 210px; animation: orbitRotate1 25s linear infinite; }
+      .orbit-ring-2 { transform-origin: 200px 210px; animation: orbitRotate2 35s linear infinite; }
+      .core-pulse { transform-origin: 200px 210px; animation: corePulse 3s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Outer Card Frame -->
+  <rect x="2" y="2" width="876" height="376" rx="18" fill="url(#orbitBg)" stroke="#253560" stroke-width="1.5"/>
+
+  <!-- Card Header -->
+  <g transform="translate(35, 32)">
+    <text x="0" y="0" fill="#00D5FF" font-size="12" font-weight="700" letter-spacing="1.5" class="font-mono">// TECH STACK</text>
+    <text x="0" y="28" fill="#F4F7FF" font-size="22" font-weight="800" class="font-sans">Tools I build with</text>
+  </g>
+
+  <!-- ==================== LEFT: ATOMIC TECH ORBIT ==================== -->
+  <g id="orbitSystem">
+    <!-- Ambient Core Halo Glow -->
+    <circle cx="200" cy="210" r="110" fill="url(#coreGlow)" opacity="0.35"/>
+
+    <!-- Orbital Ring 1 (Tilted Ellipse) -->
+    <ellipse cx="200" cy="210" rx="140" ry="60" fill="none" stroke="#00D5FF" stroke-width="1.2" opacity="0.45" stroke-dasharray="4,4" transform="rotate(-25 200 210)"/>
+
+    <!-- Orbital Ring 2 (Counter Tilted Ellipse) -->
+    <ellipse cx="200" cy="210" rx="145" ry="65" fill="none" stroke="#9457FF" stroke-width="1.2" opacity="0.45" stroke-dasharray="4,4" transform="rotate(35 200 210)"/>
+
+    <!-- Orbital Ring 3 (Horizontal/Subtle Ellipse) -->
+    <ellipse cx="200" cy="210" rx="155" ry="70" fill="none" stroke="#E34DDB" stroke-width="1" opacity="0.3" transform="rotate(-65 200 210)"/>
+
+    <!-- Animated Core Sphere with </> -->
+    <g class="core-pulse">
+      <circle cx="200" cy="210" r="32" fill="url(#orbGradient)" filter="url(#glow)"/>
+      <circle cx="200" cy="210" r="28" fill="#0A1535"/>
+      <text x="200" y="217" text-anchor="middle" fill="#00D5FF" font-size="20" font-weight="900" class="font-mono">&lt;/&gt;</text>
+    </g>
+
+    <!-- Planetary Tech Nodes (Verified from Himanshu's profile) -->
+    <!-- Node 1: AWS -->
+    <g transform="translate(85, 140)">
+      <circle cx="16" cy="16" r="16" fill="#101D40" stroke="#FF9900" stroke-width="1.5"/>
+      <text x="16" y="20" text-anchor="middle" fill="#FF9900" font-size="9" font-weight="700" class="font-sans">AWS</text>
+    </g>
+
+    <!-- Node 2: Docker -->
+    <g transform="translate(300, 160)">
+      <circle cx="16" cy="16" r="16" fill="#101D40" stroke="#2496ED" stroke-width="1.5"/>
+      <text x="16" y="20" text-anchor="middle" fill="#2496ED" font-size="9" font-weight="700" class="font-sans">🐳</text>
+    </g>
+
+    <!-- Node 3: Kubernetes -->
+    <g transform="translate(265, 270)">
+      <circle cx="16" cy="16" r="16" fill="#101D40" stroke="#326CE5" stroke-width="1.5"/>
+      <text x="16" y="20" text-anchor="middle" fill="#326CE5" font-size="9" font-weight="700" class="font-sans">K8s</text>
+    </g>
+
+    <!-- Node 4: Terraform -->
+    <g transform="translate(100, 275)">
+      <circle cx="16" cy="16" r="16" fill="#101D40" stroke="#844FBA" stroke-width="1.5"/>
+      <text x="16" y="20" text-anchor="middle" fill="#844FBA" font-size="8.5" font-weight="700" class="font-sans">IaC</text>
+    </g>
+
+    <!-- Node 5: Python -->
+    <g transform="translate(185, 110)">
+      <circle cx="15" cy="15" r="15" fill="#101D40" stroke="#00D5FF" stroke-width="1.5"/>
+      <text x="15" y="19" text-anchor="middle" fill="#00D5FF" font-size="9" font-weight="700" class="font-sans">Py</text>
+    </g>
+
+    <!-- Node 6: Linux -->
+    <g transform="translate(200, 305)">
+      <circle cx="14" cy="14" r="14" fill="#101D40" stroke="#FCC624" stroke-width="1.2"/>
+      <text x="14" y="18" text-anchor="middle" fill="#FCC624" font-size="9" font-weight="700" class="font-sans">🐧</text>
+    </g>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="410" y1="80" x2="410" y2="340" stroke="#1F3668" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- ==================== RIGHT: CATEGORIZED CHIPS ==================== -->
+  <g transform="translate(435, 75)">
+    <!-- Category 1: CLOUD & INFRASTRUCTURE -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="14" fill="#00D5FF" font-size="11" font-weight="700" letter-spacing="1" class="font-mono">// CLOUD &amp; INFRASTRUCTURE</text>
+      <g transform="translate(0, 22)">
+        <!-- AWS -->
+        <rect x="0" y="0" width="70" height="26" rx="6" fill="#101D40" stroke="#FF9900" stroke-width="1"/>
+        <text x="35" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">AWS</text>
+        <!-- Azure -->
+        <rect x="78" y="0" width="80" height="26" rx="6" fill="#101D40" stroke="#0078D4" stroke-width="1"/>
+        <text x="118" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Azure</text>
+        <!-- GCP -->
+        <rect x="166" y="0" width="72" height="26" rx="6" fill="#101D40" stroke="#4285F4" stroke-width="1"/>
+        <text x="202" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">GCP</text>
+        <!-- Terraform -->
+        <rect x="246" y="0" width="95" height="26" rx="6" fill="#101D40" stroke="#844FBA" stroke-width="1"/>
+        <text x="293.5" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Terraform</text>
+      </g>
+    </g>
+
+    <!-- Category 2: DEVOPS & CI/CD -->
+    <g transform="translate(0, 68)">
+      <text x="0" y="14" fill="#9457FF" font-size="11" font-weight="700" letter-spacing="1" class="font-mono">// DEVOPS &amp; CONTAINERS</text>
+      <g transform="translate(0, 22)">
+        <!-- Docker -->
+        <rect x="0" y="0" width="82" height="26" rx="6" fill="#101D40" stroke="#2496ED" stroke-width="1"/>
+        <text x="41" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Docker</text>
+        <!-- Kubernetes -->
+        <rect x="90" y="0" width="105" height="26" rx="6" fill="#101D40" stroke="#326CE5" stroke-width="1"/>
+        <text x="142.5" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Kubernetes</text>
+        <!-- GitHub Actions -->
+        <rect x="203" y="0" width="125" height="26" rx="6" fill="#101D40" stroke="#2088FF" stroke-width="1"/>
+        <text x="265.5" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">GitHub Actions</text>
+        <!-- Linux/Bash -->
+        <rect x="336" y="0" width="70" height="26" rx="6" fill="#101D40" stroke="#FCC624" stroke-width="1"/>
+        <text x="371" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Linux</text>
+      </g>
+    </g>
+
+    <!-- Category 3: OBSERVABILITY & DATA -->
+    <g transform="translate(0, 136)">
+      <text x="0" y="14" fill="#26D7B5" font-size="11" font-weight="700" letter-spacing="1" class="font-mono">// OBSERVABILITY &amp; DATA</text>
+      <g transform="translate(0, 22)">
+        <!-- Prometheus -->
+        <rect x="0" y="0" width="105" height="26" rx="6" fill="#101D40" stroke="#E6522C" stroke-width="1"/>
+        <text x="52.5" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Prometheus</text>
+        <!-- Grafana -->
+        <rect x="113" y="0" width="85" height="26" rx="6" fill="#101D40" stroke="#F46800" stroke-width="1"/>
+        <text x="155.5" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Grafana</text>
+        <!-- PostgreSQL -->
+        <rect x="206" y="0" width="95" height="26" rx="6" fill="#101D40" stroke="#4169E1" stroke-width="1"/>
+        <text x="253.5" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">PostgreSQL</text>
+        <!-- MongoDB -->
+        <rect x="309" y="0" width="92" height="26" rx="6" fill="#101D40" stroke="#47A248" stroke-width="1"/>
+        <text x="355" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">MongoDB</text>
+      </g>
+    </g>
+
+    <!-- Category 4: PROGRAMMING & WEB -->
+    <g transform="translate(0, 204)">
+      <text x="0" y="14" fill="#E34DDB" font-size="11" font-weight="700" letter-spacing="1" class="font-mono">// LANGUAGES &amp; WEB</text>
+      <g transform="translate(0, 22)">
+        <!-- Python -->
+        <rect x="0" y="0" width="75" height="26" rx="6" fill="#101D40" stroke="#3776AB" stroke-width="1"/>
+        <text x="37.5" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Python</text>
+        <!-- C++ -->
+        <rect x="83" y="0" width="60" height="26" rx="6" fill="#101D40" stroke="#00599C" stroke-width="1"/>
+        <text x="113" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">C++</text>
+        <!-- JavaScript -->
+        <rect x="151" y="0" width="95" height="26" rx="6" fill="#101D40" stroke="#F7DF1E" stroke-width="1"/>
+        <text x="198.5" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">JavaScript</text>
+        <!-- FastAPI -->
+        <rect x="254" y="0" width="80" height="26" rx="6" fill="#101D40" stroke="#009688" stroke-width="1"/>
+        <text x="294" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">FastAPI</text>
+        <!-- Streamlit -->
+        <rect x="342" y="0" width="80" height="26" rx="6" fill="#101D40" stroke="#FF4B4B" stroke-width="1"/>
+        <text x="382" y="17" text-anchor="middle" fill="#F4F7FF" font-size="11" font-weight="600" class="font-sans">Streamlit</text>
+      </g>
+    </g>
+  </g>
+</svg>

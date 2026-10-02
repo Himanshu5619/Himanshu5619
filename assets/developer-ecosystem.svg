@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E162B"/>
+      <stop offset="100%" stop-color="#121D3A"/>
+    </linearGradient>
+
+    <linearGradient id="pillCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+
+    <linearGradient id="pillViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <linearGradient id="pillPink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F472B6"/>
+      <stop offset="100%" stop-color="#DB2777"/>
+    </linearGradient>
+
+    <style>
+      .font-mono { font-family: 'Fira Code', 'Courier New', monospace; }
+      .font-sans { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+      @keyframes floatSubtle {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3px); }
+      }
+      .floating { animation: floatSubtle 4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Section Background Card -->
+  <rect x="2" y="2" width="956" height="276" rx="18" fill="#080B16" stroke="#293451" stroke-width="1.5"/>
+
+  <!-- Top Category Bar -->
+  <g transform="translate(35, 30)">
+    <text x="0" y="0" fill="#38BDF8" font-size="11.5" font-weight="700" letter-spacing="1.5" class="font-mono">// ARCHITECTURE &amp; CAPABILITIES</text>
+    <text x="0" y="26" fill="#F1F5F9" font-size="20" font-weight="800" class="font-sans">Engineering Pillars</text>
+  </g>
+
+  <!-- 3 Pillar Cards Grid -->
+  <g transform="translate(35, 75)">
+    <!-- Column 1: Multi-Cloud Architecture -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="280" height="175" rx="12" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.2"/>
+      <!-- Icon & Title -->
+      <circle cx="28" cy="30" r="14" fill="#101D40" stroke="#38BDF8" stroke-width="1.2"/>
+      <text x="28" y="34" text-anchor="middle" font-size="13">☁️</text>
+      <text x="52" y="34" fill="#F1F5F9" font-size="14.5" font-weight="700" class="font-sans">Cloud Architecture</text>
+      <!-- Description -->
+      <text x="16" y="65" fill="#94A3B8" font-size="11.5" class="font-sans">Designing fault-tolerant, secure,</text>
+      <text x="16" y="81" fill="#94A3B8" font-size="11.5" class="font-sans">and cost-effective cloud systems.</text>
+      <!-- Chips -->
+      <g transform="translate(16, 100)">
+        <rect x="0" y="0" width="70" height="24" rx="6" fill="#101D40" stroke="#38BDF8" stroke-width="1"/>
+        <text x="35" y="16" text-anchor="middle" fill="#38BDF8" font-size="10.5" font-weight="600" class="font-sans">AWS</text>
+
+        <rect x="78" y="0" width="75" height="24" rx="6" fill="#101D40" stroke="#38BDF8" stroke-width="1"/>
+        <text x="115.5" y="16" text-anchor="middle" fill="#38BDF8" font-size="10.5" font-weight="600" class="font-sans">Azure</text>
+
+        <rect x="161" y="0" width="85" height="24" rx="6" fill="#101D40" stroke="#38BDF8" stroke-width="1"/>
+        <text x="203.5" y="16" text-anchor="middle" fill="#38BDF8" font-size="10.5" font-weight="600" class="font-sans">Terraform</text>
+
+        <rect x="0" y="32" width="115" height="24" rx="6" fill="#101D40" stroke="#38BDF8" stroke-width="1"/>
+        <text x="57.5" y="48" text-anchor="middle" fill="#38BDF8" font-size="10.5" font-weight="600" class="font-sans">EC2 • S3 • IAM</text>
+
+        <rect x="123" y="32" width="123" height="24" rx="6" fill="#101D40" stroke="#38BDF8" stroke-width="1"/>
+        <text x="184.5" y="48" text-anchor="middle" fill="#38BDF8" font-size="10.5" font-weight="600" class="font-sans">Cost Optimizer</text>
+      </g>
+    </g>
+
+    <!-- Column 2: DevOps & Automation -->
+    <g transform="translate(305, 0)">
+      <rect x="0" y="0" width="280" height="175" rx="12" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.2"/>
+      <!-- Icon & Title -->
+      <circle cx="28" cy="30" r="14" fill="#101D40" stroke="#A78BFA" stroke-width="1.2"/>
+      <text x="28" y="34" text-anchor="middle" font-size="13">⚡</text>
+      <text x="52" y="34" fill="#F1F5F9" font-size="14.5" font-weight="700" class="font-sans">DevOps &amp; Automation</text>
+      <!-- Description -->
+      <text x="16" y="65" fill="#94A3B8" font-size="11.5" class="font-sans">Automating builds, containerization,</text>
+      <text x="16" y="81" fill="#94A3B8" font-size="11.5" class="font-sans">and zero-downtime CI/CD workflows.</text>
+      <!-- Chips -->
+      <g transform="translate(16, 100)">
+        <rect x="0" y="0" width="75" height="24" rx="6" fill="#101D40" stroke="#A78BFA" stroke-width="1"/>
+        <text x="37.5" y="16" text-anchor="middle" fill="#A78BFA" font-size="10.5" font-weight="600" class="font-sans">Docker</text>
+
+        <rect x="83" y="0" width="95" height="24" rx="6" fill="#101D40" stroke="#A78BFA" stroke-width="1"/>
+        <text x="130.5" y="16" text-anchor="middle" fill="#A78BFA" font-size="10.5" font-weight="600" class="font-sans">Kubernetes</text>
+
+        <rect x="186" y="0" width="60" height="24" rx="6" fill="#101D40" stroke="#A78BFA" stroke-width="1"/>
+        <text x="216" y="16" text-anchor="middle" fill="#A78BFA" font-size="10.5" font-weight="600" class="font-sans">Linux</text>
+
+        <rect x="0" y="32" width="130" height="24" rx="6" fill="#101D40" stroke="#A78BFA" stroke-width="1"/>
+        <text x="65" y="48" text-anchor="middle" fill="#A78BFA" font-size="10.5" font-weight="600" class="font-sans">GitHub Actions</text>
+
+        <rect x="138" y="32" width="108" height="24" rx="6" fill="#101D40" stroke="#A78BFA" stroke-width="1"/>
+        <text x="192" y="48" text-anchor="middle" fill="#A78BFA" font-size="10.5" font-weight="600" class="font-sans">Jenkins CI/CD</text>
+      </g>
+    </g>
+
+    <!-- Column 3: Full-Stack & Observability -->
+    <g transform="translate(610, 0)">
+      <rect x="0" y="0" width="280" height="175" rx="12" fill="url(#cardBg)" stroke="#1E293B" stroke-width="1.2"/>
+      <!-- Icon & Title -->
+      <circle cx="28" cy="30" r="14" fill="#101D40" stroke="#F472B6" stroke-width="1.2"/>
+      <text x="28" y="34" text-anchor="middle" font-size="13">📊</text>
+      <text x="52" y="34" fill="#F1F5F9" font-size="14.5" font-weight="700" class="font-sans">Full-Stack &amp; Metrics</text>
+      <!-- Description -->
+      <text x="16" y="65" fill="#94A3B8" font-size="11.5" class="font-sans">Building high-performance services</text>
+      <text x="16" y="81" fill="#94A3B8" font-size="11.5" class="font-sans">with comprehensive monitoring.</text>
+      <!-- Chips -->
+      <g transform="translate(16, 100)">
+        <rect x="0" y="0" width="75" height="24" rx="6" fill="#101D40" stroke="#F472B6" stroke-width="1"/>
+        <text x="37.5" y="16" text-anchor="middle" fill="#F472B6" font-size="10.5" font-weight="600" class="font-sans">Python</text>
+
+        <rect x="83" y="0" width="80" height="24" rx="6" fill="#101D40" stroke="#F472B6" stroke-width="1"/>
+        <text x="123" y="16" text-anchor="middle" fill="#F472B6" font-size="10.5" font-weight="600" class="font-sans">FastAPI</text>
+
+        <rect x="171" y="0" width="75" height="24" rx="6" fill="#101D40" stroke="#F472B6" stroke-width="1"/>
+        <text x="208.5" y="16" text-anchor="middle" fill="#F472B6" font-size="10.5" font-weight="600" class="font-sans">React</text>
+
+        <rect x="0" y="32" width="110" height="24" rx="6" fill="#101D40" stroke="#F472B6" stroke-width="1"/>
+        <text x="55" y="48" text-anchor="middle" fill="#F472B6" font-size="10.5" font-weight="600" class="font-sans">Prometheus</text>
+
+        <rect x="118" y="32" width="128" height="24" rx="6" fill="#101D40" stroke="#F472B6" stroke-width="1"/>
+        <text x="182" y="48" text-anchor="middle" fill="#F472B6" font-size="10.5" font-weight="600" class="font-sans">Grafana • Postgres</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -178,7 +178,7 @@
   <a href="https://github.com/Himanshu5619"><img src="https://img.shields.io/badge/GITHUB-161B22?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://linkedin.com/in/himanshu-singh-b3aa71218"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="mailto:himanshu.s19@proton.me"><img src="https://img.shields.io/badge/EMAIL-6D4AFF?style=for-the-badge&logo=protonmail&logoColor=white" alt="Email" /></a>
-  <a href="https://himanshu5619.github.io/Portfolio/"><img src="https://img.shields.io/badge/PORTFOLIO-161B22?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://himanshu5619.github.io/my-portfolio/"><img src="https://img.shields.io/badge/PORTFOLIO-161B22?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" /></a>
 </p>
 
 <p style="color: #8B949E; font-size: 13.5px; font-style: italic; font-family: 'JetBrains Mono', monospace; margin-top: 14px;">

@@ -36,10 +36,26 @@
 
 ---
 
-<!-- ==================== SECTION 1: TERMINAL INITIALIZATION SEQUENCE ==================== -->
+<!-- ==================== SECTION 1: LIVE TERMINAL & ANIMATED ASCII PORTRAIT (50:50) ==================== -->
 <div align="center">
 
-<img src="./assets/terminal-init-sequence.svg" width="100%" alt="himanshu@dev:~$ ./initialize.sh" style="max-width: 960px;" />
+<table border="0" width="100%" cellspacing="0" cellpadding="0" style="max-width: 960px; border-collapse: collapse; border: 1.5px solid #30363D; border-radius: 12px; overflow: hidden; background: #0D1117;">
+  <!-- Live Terminal Titlebar -->
+  <tr>
+    <td colspan="2" style="padding: 0; margin: 0; line-height: 0;">
+      <img src="./assets/terminal-init-titlebar.svg" width="100%" alt="himanshu@dev:~ (bash) - Live Terminal" style="display: block; margin: 0; padding: 0;" />
+    </td>
+  </tr>
+  <!-- 50:50 Split: Left CLI Sequence / Right Animated ASCII Art Portrait -->
+  <tr>
+    <td width="50%" valign="top" style="padding: 6px 12px; margin: 0; border-right: 1.5px solid #21262D; background: #0D1117;">
+      <img src="./assets/terminal-init-left.svg" width="100%" alt="Terminal Commands: whoami, cat about.md, initialize.sh" style="display: block;" />
+    </td>
+    <td width="50%" valign="middle" align="center" style="padding: 0; margin: 0; background: #0D1117;">
+      <img src="./assets/profile-ascii-typing.gif" width="100%" alt="Himanshu Singh ASCII Art Typing Animation" style="display: block;" />
+    </td>
+  </tr>
+</table>
 
 </div>
 

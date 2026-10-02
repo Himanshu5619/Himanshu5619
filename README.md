@@ -8,7 +8,7 @@
       <img src="./assets/terminal-titlebar.svg" width="100%" alt="Himanshu Singh Terminal Titlebar" style="display: block; margin: 0; padding: 0;" />
     </td>
   </tr>
-  <!-- Content Body: 40% Portrait / 60% Dashboard -->
+  <!-- Content Body: 42% Portrait / 58% Dashboard -->
   <tr>
     <td width="42.4%" valign="top" style="padding: 6px; margin: 0; border-right: 1.5px solid #E5E5E5; background: #FFFFFF;">
       <!-- Real Photo Biometric Scanning Animation -->
@@ -36,37 +36,44 @@
 
 ---
 
-<!-- ==================== SECTION: ABOUT TELEMETRY (about.yaml) ==================== -->
-### `himanshu@dev:~$ cat about.yaml`
-
-```yaml
-profile:
-  name: Himanshu Singh
-  role: Cloud Computing & Full-Stack Developer
-  education: B.Tech CSE (Cloud Computing & Virtualization Technologies)
-  university: UPES, Dehradun
-  location: India
-  focus:
-    - Multi-Cloud Infrastructure (AWS, Azure, Google Cloud)
-    - Infrastructure as Code (Terraform)
-    - Containerization & Microservices (Docker, Kubernetes)
-    - CI/CD Automation & GitHub Actions
-  status: Building & Learning
-  mission: "Build scalable, reliable and automated solutions — one commit at a time."
-```
-
----
-
-<!-- ==================== SECTION: SKILLS MATRIX ==================== -->
+<!-- ==================== SECTION 1: TERMINAL INITIALIZATION SEQUENCE ==================== -->
 <div align="center">
 
-<img src="./assets/skills-matrix.svg" width="100%" alt="himanshu@dev:~$ ./skills --list" style="max-width: 960px;" />
+<img src="./assets/terminal-init-sequence.svg" width="100%" alt="himanshu@dev:~$ ./initialize.sh" style="max-width: 960px;" />
 
 </div>
 
 ---
 
-<!-- ==================== SECTION: FEATURED PROJECTS ==================== -->
+<!-- ==================== SECTION 2: DEVELOPER ID CARD & DASHBOARD ==================== -->
+<div align="center">
+
+<img src="./assets/developer-id-dashboard.svg" width="100%" alt="Developer ID Card &amp; Dashboard" style="max-width: 960px;" />
+
+</div>
+
+---
+
+<!-- ==================== SECTION 3: PLANETARY TECH STACK ORBIT ==================== -->
+<div align="center">
+
+<img src="./assets/tech-orbit.svg" width="100%" alt="Planetary Tech Stack Orbit" style="max-width: 960px;" />
+
+</div>
+
+<br />
+
+<!-- Official Brand Icon Grid (Devicon / SkillIcons) -->
+<div align="center">
+  <p align="left"><code>himanshu@dev:~$ ./skills --icons</code></p>
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,c,cpp,java,js,ts,react,nodejs,html,css,docker,kubernetes,terraform,aws,gcp,azure,linux,bash,git,github,vscode,postgres,supabase,prisma,postman&perline=13&theme=dark" alt="Technical Skills Icons Grid" />
+  </a>
+</div>
+
+---
+
+<!-- ==================== SECTION 4: FEATURED BUILDS ==================== -->
 ### `himanshu@dev:~$ ls -la ./projects`
 
 <table border="0" width="100%" cellspacing="0" cellpadding="8">
@@ -118,17 +125,24 @@ profile:
 
 ---
 
-<!-- ==================== SECTION: GITHUB ANALYTICS ==================== -->
-### `himanshu@dev:~$ ./analytics --stats`
+<!-- ==================== SECTION 5: GITHUB ANALYTICS & ACTIVITY WAVE ==================== -->
+### `himanshu@dev:~$ ./analytics --overview`
 
 <div align="center">
 
+<!-- Contribution Wave Graph -->
+<img src="./assets/contribution-wave.svg" width="100%" alt="Contribution Activity Wave Graph" style="max-width: 960px;" />
+
+<br /><br />
+
+<!-- GitHub Streak Stats -->
 <a href="https://github.com/Himanshu5619">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Himanshu5619&theme=dark&border_radius=8&background=0D1117&border=30363D&ring=FFFFFF&fire=FFFFFF&currStreakLabel=FFFFFF&dates=8B949E" width="100%" alt="Himanshu's GitHub Streak" style="max-width: 960px;" />
 </a>
 
 <br /><br />
 
+<!-- Dual Stats & Top Languages -->
 <table border="0" width="100%">
   <tr>
     <td width="50%" align="center" valign="middle">
@@ -147,13 +161,13 @@ profile:
 <br />
 
 <!-- GitHub Trophies & Achievements Matrix -->
-<img src="./assets/trophies.svg" width="100%" alt="Himanshu's GitHub Achievements & Trophies" style="max-width: 960px;" />
+<img src="./assets/trophies.svg" width="100%" alt="Himanshu's GitHub Achievements &amp; Trophies" style="max-width: 960px;" />
 
 </div>
 
 ---
 
-<!-- ==================== SECTION: CONNECT & FOOTER ==================== -->
+<!-- ==================== SECTION 6: CONNECT & FOOTER ==================== -->
 <div align="center">
 
 ### `himanshu@dev:~$ ./connect`

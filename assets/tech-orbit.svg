@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="100%" height="100%">
+  <defs>
+    <style>
+      .font-mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', 'Fira Code', monospace; }
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif; }
+      .orbit-ring { fill: none; stroke: #30363D; stroke-width: 1.2; stroke-dasharray: 4 4; }
+      .cat-badge { rx: 4; fill: #161B22; stroke: #30363D; stroke-width: 1; }
+      .cat-text { fill: #E2E8F0; font-size: 11px; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+      @keyframes orbitSpin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .spin-slow { transform-origin: 200px 200px; animation: orbitSpin 30s linear infinite; }
+      .spin-rev { transform-origin: 200px 200px; animation: orbitSpin 45s linear infinite reverse; }
+    </style>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#3B82F6" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="958" height="398" rx="14" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+
+  <!-- ==================== LEFT: PLANETARY ORBIT SYSTEM ==================== -->
+  <g transform="translate(0, 0)">
+    <!-- Core Ambient Radial Glow -->
+    <circle cx="210" cy="200" r="140" fill="url(#coreGlow)"/>
+
+    <!-- Concentric Orbit Ellipses -->
+    <ellipse cx="210" cy="200" rx="90" ry="90" class="orbit-ring"/>
+    <ellipse cx="210" cy="200" rx="140" ry="75" class="orbit-ring" transform="rotate(-30 210 200)"/>
+    <ellipse cx="210" cy="200" rx="150" ry="85" class="orbit-ring" transform="rotate(35 210 200)"/>
+    <ellipse cx="210" cy="200" rx="180" ry="180" class="orbit-ring"/>
+
+    <!-- Central Glowing Core -->
+    <circle cx="210" cy="200" r="38" fill="url(#coreGrad)" stroke="#E9D5FF" stroke-width="1.5"/>
+    <text x="210" y="207" text-anchor="middle" fill="#FFFFFF" font-size="20" font-weight="900" class="font-mono">&lt; / &gt;</text>
+
+    <!-- Orbiting Tech Planet Nodes -->
+    <!-- Node 1: Docker -->
+    <g transform="translate(210, 110)">
+      <circle cx="0" cy="0" r="16" fill="#161B22" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="0" y="5" text-anchor="middle" font-size="14">🐳</text>
+    </g>
+
+    <!-- Node 2: Python -->
+    <g transform="translate(210, 290)">
+      <circle cx="0" cy="0" r="16" fill="#161B22" stroke="#FBBF24" stroke-width="1.5"/>
+      <text x="0" y="5" text-anchor="middle" font-size="14">🐍</text>
+    </g>
+
+    <!-- Node 3: AWS -->
+    <g transform="translate(120, 200)">
+      <circle cx="0" cy="0" r="16" fill="#161B22" stroke="#F97316" stroke-width="1.5"/>
+      <text x="0" y="4" text-anchor="middle" fill="#F97316" font-size="9" font-weight="900" class="font-mono">AWS</text>
+    </g>
+
+    <!-- Node 4: Terraform -->
+    <g transform="translate(300, 200)">
+      <circle cx="0" cy="0" r="16" fill="#161B22" stroke="#A855F7" stroke-width="1.5"/>
+      <text x="0" y="5" text-anchor="middle" font-size="14">⬢</text>
+    </g>
+
+    <!-- Node 5: React (Outer orbit) -->
+    <g transform="translate(80, 110)">
+      <circle cx="0" cy="0" r="15" fill="#161B22" stroke="#38BDF8" stroke-width="1.2"/>
+      <text x="0" y="5" text-anchor="middle" font-size="13">⚛</text>
+    </g>
+
+    <!-- Node 6: Kubernetes -->
+    <g transform="translate(340, 280)">
+      <circle cx="0" cy="0" r="15" fill="#161B22" stroke="#3B82F6" stroke-width="1.2"/>
+      <text x="0" y="4" text-anchor="middle" fill="#3B82F6" font-size="9" font-weight="900" class="font-mono">k8s</text>
+    </g>
+
+    <!-- Node 7: Linux -->
+    <g transform="translate(340, 120)">
+      <circle cx="0" cy="0" r="15" fill="#161B22" stroke="#FBBF24" stroke-width="1.2"/>
+      <text x="0" y="5" text-anchor="middle" font-size="13">🐧</text>
+    </g>
+
+    <!-- Node 8: Prometheus & Grafana -->
+    <g transform="translate(80, 290)">
+      <circle cx="0" cy="0" r="15" fill="#161B22" stroke="#F43F5E" stroke-width="1.2"/>
+      <text x="0" y="5" text-anchor="middle" font-size="13">📈</text>
+    </g>
+  </g>
+
+  <!-- Vertical Divider -->
+  <line x1="430" y1="24" x2="430" y2="376" stroke="#21262D" stroke-width="1"/>
+
+  <!-- ==================== RIGHT: CATEGORIZED TECH ECOSYSTEM ==================== -->
+  <g transform="translate(460, 32)">
+    <text x="0" y="0" fill="#64748B" font-size="10.5" font-weight="700" class="font-mono">// ECOSYSTEM &amp; TECH STACK</text>
+    <text x="0" y="24" fill="#FFFFFF" font-size="20" font-weight="900" class="font-sans">Planetary Technical Stack</text>
+
+    <!-- Category 1: Cloud & DevOps -->
+    <g transform="translate(0, 48)">
+      <text x="0" y="10" fill="#38BDF8" font-size="10.5" font-weight="700" class="font-mono">// CLOUD &amp; DEVOPS</text>
+      <g transform="translate(0, 18)">
+        <g transform="translate(0, 0)"><rect x="0" y="0" width="70" height="26" class="cat-badge"/><text x="35" y="17" text-anchor="middle" class="cat-text">AWS</text></g>
+        <g transform="translate(78, 0)"><rect x="0" y="0" width="105" height="26" class="cat-badge"/><text x="52" y="17" text-anchor="middle" class="cat-text">Azure</text></g>
+        <g transform="translate(191, 0)"><rect x="0" y="0" width="70" height="26" class="cat-badge"/><text x="35" y="17" text-anchor="middle" class="cat-text">GCP</text></g>
+        <g transform="translate(269, 0)"><rect x="0" y="0" width="95" height="26" class="cat-badge"/><text x="47" y="17" text-anchor="middle" class="cat-text">Terraform</text></g>
+        <g transform="translate(372, 0)"><rect x="0" y="0" width="75" height="26" class="cat-badge"/><text x="37" y="17" text-anchor="middle" class="cat-text">Docker</text></g>
+      </g>
+    </g>
+
+    <!-- Category 2: Backend & Languages -->
+    <g transform="translate(0, 118)">
+      <text x="0" y="10" fill="#A855F7" font-size="10.5" font-weight="700" class="font-mono">// BACKEND &amp; LANGUAGES</text>
+      <g transform="translate(0, 18)">
+        <g transform="translate(0, 0)"><rect x="0" y="0" width="78" height="26" class="cat-badge"/><text x="39" y="17" text-anchor="middle" class="cat-text">Python</text></g>
+        <g transform="translate(86, 0)"><rect x="0" y="0" width="100" height="26" class="cat-badge"/><text x="50" y="17" text-anchor="middle" class="cat-text">JavaScript</text></g>
+        <g transform="translate(194, 0)"><rect x="0" y="0" width="100" height="26" class="cat-badge"/><text x="50" y="17" text-anchor="middle" class="cat-text">TypeScript</text></g>
+        <g transform="translate(302, 0)"><rect x="0" y="0" width="75" height="26" class="cat-badge"/><text x="37" y="17" text-anchor="middle" class="cat-text">React</text></g>
+        <g transform="translate(385, 0)"><rect x="0" y="0" width="75" height="26" class="cat-badge"/><text x="37" y="17" text-anchor="middle" class="cat-text">Node.js</text></g>
+      </g>
+    </g>
+
+    <!-- Category 3: Data & Enterprise -->
+    <g transform="translate(0, 188)">
+      <text x="0" y="10" fill="#34D399" font-size="10.5" font-weight="700" class="font-mono">// DATA &amp; OBSERVABILITY</text>
+      <g transform="translate(0, 18)">
+        <g transform="translate(0, 0)"><rect x="0" y="0" width="98" height="26" class="cat-badge"/><text x="49" y="17" text-anchor="middle" class="cat-text">Prometheus</text></g>
+        <g transform="translate(106, 0)"><rect x="0" y="0" width="78" height="26" class="cat-badge"/><text x="39" y="17" text-anchor="middle" class="cat-text">Grafana</text></g>
+        <g transform="translate(192, 0)"><rect x="0" y="0" width="94" height="26" class="cat-badge"/><text x="47" y="17" text-anchor="middle" class="cat-text">PostgreSQL</text></g>
+        <g transform="translate(294, 0)"><rect x="0" y="0" width="86" height="26" class="cat-badge"/><text x="43" y="17" text-anchor="middle" class="cat-text">Supabase</text></g>
+        <g transform="translate(388, 0)"><rect x="0" y="0" width="72" height="26" class="cat-badge"/><text x="36" y="17" text-anchor="middle" class="cat-text">Prisma</text></g>
+      </g>
+    </g>
+
+    <!-- Category 4: Automation & CI/CD -->
+    <g transform="translate(0, 258)">
+      <text x="0" y="10" fill="#F43F5E" font-size="10.5" font-weight="700" class="font-mono">// CI/CD &amp; AUTOMATION</text>
+      <g transform="translate(0, 18)">
+        <g transform="translate(0, 0)"><rect x="0" y="0" width="126" height="26" class="cat-badge"/><text x="63" y="17" text-anchor="middle" class="cat-text">GitHub Actions</text></g>
+        <g transform="translate(134, 0)"><rect x="0" y="0" width="75" height="26" class="cat-badge"/><text x="37" y="17" text-anchor="middle" class="cat-text">CI/CD</text></g>
+        <g transform="translate(217, 0)"><rect x="0" y="0" width="80" height="26" class="cat-badge"/><text x="40" y="17" text-anchor="middle" class="cat-text">Jenkins</text></g>
+        <g transform="translate(305, 0)"><rect x="0" y="0" width="70" height="26" class="cat-badge"/><text x="35" y="17" text-anchor="middle" class="cat-text">Linux</text></g>
+        <g transform="translate(383, 0)"><rect x="0" y="0" width="75" height="26" class="cat-badge"/><text x="37" y="17" text-anchor="middle" class="cat-text">IaC</text></g>
+      </g>
+    </g>
+
+    <!-- Footnote -->
+    <g transform="translate(0, 330)">
+      <line x1="0" y1="0" x2="465" y2="0" stroke="#1F242C" stroke-width="1"/>
+      <text x="0" y="16" fill="#64748B" font-size="9.5" font-weight="600" class="font-mono">scalable multi-cloud orchestration • microservices mesh</text>
+    </g>
+  </g>
+</svg>

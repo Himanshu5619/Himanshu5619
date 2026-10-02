@@ -36,55 +36,24 @@
 
 ---
 
-<!-- ==================== SECTION: CAT ABOUT.MD (40/60 TERMINAL CARD) ==================== -->
-<div align="center">
+<!-- ==================== SECTION: ABOUT TELEMETRY (about.yaml) ==================== -->
+### `himanshu@dev:~$ cat about.yaml`
 
-<table border="0" width="100%" cellspacing="0" cellpadding="0" style="max-width: 960px; border-collapse: collapse; border: 1.5px solid #30363D; border-radius: 12px; overflow: hidden; background: #0D1117;">
-  <!-- Terminal Window Bar -->
-  <tr>
-    <td colspan="2" style="background: #161B22; padding: 10px 16px; border-bottom: 1px solid #30363D;">
-      <span style="color: #FF5F56;">●</span>
-      <span style="color: #FFBD2E;">●</span>
-      <span style="color: #27C93F;">●</span>
-      &nbsp;&nbsp;<code style="background: transparent; color: #C9D1D9; border: none; font-size: 12px; font-weight: 600;">himanshu@dev:~$ cat about.md</code>
-      <span align="right" style="float: right; color: #8B949E; font-size: 11px; font-family: monospace;">SYSTEM STATUS: <b style="color: #34D399;">ONLINE ●</b></span>
-    </td>
-  </tr>
-  <tr>
-    <!-- Left Column: 40% Profile Photograph with scanning animation -->
-    <td width="38%" valign="top" style="padding: 14px; border-right: 1px solid #30363D; background: #0D1117; text-align: center;">
-      <div style="border: 1px solid #30363D; border-radius: 8px; overflow: hidden; background: #161B22; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
-        <img src="./assets/profile-scan.gif" width="100%" alt="Himanshu Singh Biometric Scan" style="display: block;" />
-      </div>
-      <div style="margin-top: 10px; font-family: monospace; font-size: 11px; color: #8B949E; line-height: 1.6;">
-        <code>TARGET: HIMANSHU SINGH</code><br/>
-        <span style="color: #34D399; font-weight: bold;">● BIOMETRIC VERIFIED</span>
-      </div>
-    </td>
-    <!-- Right Column: 60% Interactive Terminal Output -->
-    <td width="62%" valign="top" style="padding: 10px; background: #0D1117;">
-      <img src="./assets/about-terminal.svg" width="100%" alt="himanshu@dev:~$ cat about.md" style="display: block;" />
-    </td>
-  </tr>
-</table>
-
-</div>
-
-<details>
-<summary><b>📄 View Accessible Terminal Text (about.md)</b></summary>
-
-```bash
-# HIMANSHU SINGH // CLOUD & DEVOPS ENTHUSIAST
-NAME       : Himanshu Singh
-LOCATION   : India
-EDUCATION  : B.Tech CSE (Cloud Computing & Virtualization Technologies)
-UNIVERSITY : UPES, Dehradun
-ROLE       : Cloud Computing Enthusiast • DevOps & Automation • Full-Stack Developer
-FOCUS      : Cloud Infrastructure • Infrastructure as Code (IaC) • CI/CD Automation
-STATUS     : Building | Learning | Exploring
-MISSION    : "Build scalable, reliable and automated solutions — one commit at a time."
+```yaml
+profile:
+  name: Himanshu Singh
+  role: Cloud Computing & Full-Stack Developer
+  education: B.Tech CSE (Cloud Computing & Virtualization Technologies)
+  university: UPES, Dehradun
+  location: India
+  focus:
+    - Multi-Cloud Infrastructure (AWS, Azure, Google Cloud)
+    - Infrastructure as Code (Terraform)
+    - Containerization & Microservices (Docker, Kubernetes)
+    - CI/CD Automation & GitHub Actions
+  status: Building & Learning
+  mission: "Build scalable, reliable and automated solutions — one commit at a time."
 ```
-</details>
 
 ---
 
@@ -174,6 +143,11 @@ MISSION    : "Build scalable, reliable and automated solutions — one commit at
     </td>
   </tr>
 </table>
+
+<br />
+
+<!-- GitHub Trophies & Achievements Matrix -->
+<img src="./assets/trophies.svg" width="100%" alt="Himanshu's GitHub Achievements & Trophies" style="max-width: 960px;" />
 
 </div>
 

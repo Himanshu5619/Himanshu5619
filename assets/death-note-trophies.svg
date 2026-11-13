@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 120" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      .font-mono { font-family: 'JetBrains Mono', monospace; }
+      .font-gothic { font-family: 'Cinzel', serif; }
+
+      .trophy-card {
+        fill: #0F101A;
+        stroke: #2E1925;
+        stroke-width: 1.2;
+        rx: 8;
+        transition: all 0.25s ease;
+      }
+      .trophy-group:hover .trophy-card {
+        fill: #1C1220;
+        stroke: #FF1E27;
+        filter: drop-shadow(0 0 8px rgba(255, 30, 39, 0.4));
+      }
+      .trophy-group:hover .trophy-title {
+        fill: #FF1E27;
+      }
+      .trophy-title {
+        fill: #F8FAFC;
+        font-size: 11px;
+        font-weight: 700;
+        font-family: 'Cinzel', serif;
+        letter-spacing: 0.5px;
+        transition: fill 0.25s ease;
+      }
+      .trophy-sub {
+        fill: #94A3B8;
+        font-size: 9px;
+        font-weight: 600;
+        font-family: 'JetBrains Mono', monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Row of 6 Death Note Trophies -->
+  <g transform="translate(10, 10)">
+    
+    <!-- Trophy 1: Shinigami Coder -->
+    <g class="trophy-group" transform="translate(0, 0)">
+      <rect x="0" y="0" width="146" height="100" class="trophy-card"/>
+      <circle cx="73" cy="32" r="18" fill="#07070A" stroke="#FF1E27" stroke-width="1"/>
+      <text x="73" y="38" text-anchor="middle" font-size="18">🍎</text>
+      <text x="73" y="68" text-anchor="middle" class="trophy-title">Shinigami Coder</text>
+      <text x="73" y="84" text-anchor="middle" class="trophy-sub">Python • Go • TS</text>
+    </g>
+
+    <!-- Trophy 2: Cloud Architect -->
+    <g class="trophy-group" transform="translate(158, 0)">
+      <rect x="0" y="0" width="146" height="100" class="trophy-card"/>
+      <circle cx="73" cy="32" r="18" fill="#07070A" stroke="#7C3AED" stroke-width="1"/>
+      <text x="73" y="38" text-anchor="middle" font-size="18">☁️</text>
+      <text x="73" y="68" text-anchor="middle" class="trophy-title">Cloud Warlock</text>
+      <text x="73" y="84" text-anchor="middle" class="trophy-sub">AWS • Multi-Cloud</text>
+    </g>
+
+    <!-- Trophy 3: IaC Sorcery -->
+    <g class="trophy-group" transform="translate(316, 0)">
+      <rect x="0" y="0" width="146" height="100" class="trophy-card"/>
+      <circle cx="73" cy="32" r="18" fill="#07070A" stroke="#38BDF8" stroke-width="1"/>
+      <text x="73" y="38" text-anchor="middle" font-size="18">⬢</text>
+      <text x="73" y="68" text-anchor="middle" class="trophy-title">IaC Architect</text>
+      <text x="73" y="84" text-anchor="middle" class="trophy-sub">Terraform • Config</text>
+    </g>
+
+    <!-- Trophy 4: Container Master -->
+    <g class="trophy-group" transform="translate(474, 0)">
+      <rect x="0" y="0" width="146" height="100" class="trophy-card"/>
+      <circle cx="73" cy="32" r="18" fill="#07070A" stroke="#34D399" stroke-width="1"/>
+      <text x="73" y="38" text-anchor="middle" font-size="18">🐳</text>
+      <text x="73" y="68" text-anchor="middle" class="trophy-title">Docker Vanguard</text>
+      <text x="73" y="84" text-anchor="middle" class="trophy-sub">K8s • Containers</text>
+    </g>
+
+    <!-- Trophy 5: Eyes of Observability -->
+    <g class="trophy-group" transform="translate(632, 0)">
+      <rect x="0" y="0" width="146" height="100" class="trophy-card"/>
+      <circle cx="73" cy="32" r="18" fill="#07070A" stroke="#FF1E27" stroke-width="1"/>
+      <text x="73" y="38" text-anchor="middle" font-size="18">👁️</text>
+      <text x="73" y="68" text-anchor="middle" class="trophy-title">Shinigami Eyes</text>
+      <text x="73" y="84" text-anchor="middle" class="trophy-sub">Prometheus • Alert</text>
+    </g>
+
+    <!-- Trophy 6: Zero-Day CI/CD -->
+    <g class="trophy-group" transform="translate(790, 0)">
+      <rect x="0" y="0" width="146" height="100" class="trophy-card"/>
+      <circle cx="73" cy="32" r="18" fill="#07070A" stroke="#F59E0B" stroke-width="1"/>
+      <text x="73" y="38" text-anchor="middle" font-size="18">⚡</text>
+      <text x="73" y="68" text-anchor="middle" class="trophy-title">Zero-Day CI/CD</text>
+      <text x="73" y="84" text-anchor="middle" class="trophy-sub">Actions • Fast Deploy</text>
+    </g>
+
+  </g>
+</svg>
+

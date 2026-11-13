@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 380" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=JetBrains+Mono:wght@500;700;800&amp;family=Inter:wght@600;700;800&amp;display=swap');
+      .font-mono { font-family: 'JetBrains Mono', monospace; }
+      .font-sans { font-family: 'Inter', -apple-system, sans-serif; }
+      .font-gothic { font-family: 'Cinzel', serif; }
+
+      @keyframes eyeGlowBeam {
+        0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 10px #FF1E27); }
+        50% { opacity: 0.5; filter: drop-shadow(0 0 4px #FF1E27); }
+      }
+      @keyframes beamPulse {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.65; }
+      }
+      @keyframes appleLevitate {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+
+      .eye-beam { animation: eyeGlowBeam 2s infinite ease-in-out; }
+      .beam-glow { animation: beamPulse 2.5s infinite ease-in-out; }
+      .apple-levitate { animation: appleLevitate 3s infinite ease-in-out; transform-origin: 210px 240px; }
+
+      /* Skill Badge Hover Transitions */
+      .skill-pill {
+        rx: 6;
+        fill: #131522;
+        stroke: #2A2D40;
+        stroke-width: 1.2;
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+      }
+      .skill-group:hover .skill-pill {
+        fill: #1E1B2E;
+        stroke: #FF1E27;
+        filter: drop-shadow(0 0 8px rgba(255, 30, 39, 0.4));
+      }
+      .skill-group:hover text {
+        fill: #FFFFFF !important;
+      }
+    </style>
+
+    <linearGradient id="arsenalBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080C"/>
+      <stop offset="50%" stop-color="#0F101A"/>
+      <stop offset="100%" stop-color="#06070A"/>
+    </linearGradient>
+
+    <!-- Beam projection gradient from Ryuk's hand across the skills -->
+    <linearGradient id="shinigamiBeam" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FF1E27" stop-opacity="0.8"/>
+      <stop offset="30%" stop-color="#A855F7" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#08080C" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="appleGlow" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FF4D55"/>
+      <stop offset="50%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect x="2" y="2" width="956" height="376" rx="14" fill="url(#arsenalBg)" stroke="#381D28" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <path d="M 2 14 Q 2 2 14 2 L 946 2 Q 958 2 958 14 L 958 36 L 2 36 Z" fill="#11121C"/>
+  <line x1="2" y1="36" x2="958" y2="36" stroke="#2B1A24" stroke-width="1"/>
+  
+  <text x="24" y="23" fill="#FF1E27" font-size="11" font-weight="900" letter-spacing="1.5" class="font-gothic">// JUTSU ARSENAL // TOOLS I FIGHT WITH</text>
+  <text x="936" y="23" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600" class="font-mono">himanshu@shinigami:~$ ./arsenal --all</text>
+
+  <!-- ==================== SHINIGAMI LIGHT BEAM (BEHIND SKILLS) ==================== -->
+  <polygon points="215,225 940,55 940,350 215,245" fill="url(#shinigamiBeam)" class="beam-glow"/>
+
+  <!-- ==================== LEFT: RYUK PORTRAIT WITH GLOWING HAND ==================== -->
+  <g transform="translate(20, 50)">
+    
+    <!-- Aura behind Ryuk -->
+    <ellipse cx="140" cy="160" rx="90" ry="110" fill="#200A12" opacity="0.6"/>
+
+    <!-- Wing Shadows -->
+    <path d="M 120 120 C 60 70 10 90 0 140 C 30 150 70 140 100 160 C 50 180 20 220 15 250 C 50 240 85 220 120 210 Z" fill="#0C0E14" stroke="#25293A" stroke-width="1"/>
+    <path d="M 160 120 C 220 70 270 90 280 140 C 250 150 210 140 180 160 Z" fill="#0C0E14" stroke="#25293A" stroke-width="1"/>
+
+    <!-- Ryuk Torso & Spiky Mantle -->
+    <path d="M 85 210 C 95 180 185 180 195 210 L 210 300 L 70 300 Z" fill="#131522" stroke="#2E334D" stroke-width="1.2"/>
+    <path d="M 75 200 L 95 230 L 110 205 L 125 235 L 140 210 L 155 235 L 170 205 L 185 230 L 205 200 Z" fill="#181B28" stroke="#7C3AED" stroke-width="1"/>
+
+    <!-- Neck & Face -->
+    <path d="M 120 160 L 125 195 L 155 195 L 160 160 Z" fill="#9CA3AF"/>
+    <path d="M 105 125 C 105 175 125 188 140 188 C 155 188 175 175 175 125 C 175 95 155 90 140 90 C 125 90 105 95 105 125 Z" fill="#D1D5DB" stroke="#4B5563" stroke-width="1.2"/>
+
+    <!-- Spiky Hair -->
+    <path d="M 105 110 L 85 85 L 100 95 L 90 65 L 110 80 L 115 50 L 130 72 L 140 42 L 150 72 L 165 50 L 170 80 L 190 65 L 180 95 L 195 85 L 175 110 Z" fill="#0A0B10" stroke="#7C3AED" stroke-width="1"/>
+
+    <!-- Shinigami Glowing Red Eyes -->
+    <circle cx="123" cy="118" r="8" fill="#111827" stroke="#FF1E27" stroke-width="1.5" class="eye-beam"/>
+    <circle cx="123" cy="118" r="5.5" fill="#FF1E27" class="eye-beam"/>
+    <circle cx="123" cy="118" r="2" fill="#FEF08A"/>
+
+    <circle cx="157" cy="118" r="8" fill="#111827" stroke="#FF1E27" stroke-width="1.5" class="eye-beam"/>
+    <circle cx="157" cy="118" r="5.5" fill="#FF1E27" class="eye-beam"/>
+    <circle cx="157" cy="118" r="2" fill="#FEF08A"/>
+
+    <!-- Grin & Razor Teeth -->
+    <path d="M 112 142 C 120 172 160 172 168 142 Z" fill="#111827"/>
+    <g fill="#F3F4F6">
+      <polygon points="116,145 119,152 122,145"/>
+      <polygon points="122,146 126,155 130,146"/>
+      <polygon points="130,147 135,157 140,147"/>
+      <polygon points="140,147 145,157 150,147"/>
+      <polygon points="150,146 154,155 158,146"/>
+      <polygon points="158,145 161,152 164,145"/>
+    </g>
+
+    <!-- Outstretched Claw Hand Casting the Tech Arsenal -->
+    <g class="apple-levitate">
+      <!-- Claws / Fingers -->
+      <path d="M 175 220 L 195 210 L 210 215 L 215 225 L 195 235 Z" fill="#9CA3AF" stroke="#374151" stroke-width="1"/>
+      <path d="M 195 210 L 208 200 M 205 215 L 218 212 M 202 225 L 215 230" stroke="#E5E7EB" stroke-width="1.5"/>
+      
+      <!-- Glowing Apple in Palm -->
+      <circle cx="195" cy="225" r="16" fill="url(#appleGlow)" stroke="#7F1D1D" stroke-width="1"/>
+      <path d="M 195 211 Q 198 206 203 205" stroke="#16A34A" stroke-width="1.2" fill="none"/>
+      <ellipse cx="190" cy="220" rx="4" ry="7" fill="#FCA5A5" opacity="0.6"/>
+      <!-- Radiating sparkles -->
+      <circle cx="218" cy="210" r="1.5" fill="#FEF08A"/>
+      <circle cx="180" cy="210" r="1.5" fill="#FEF08A"/>
+      <circle cx="205" cy="245" r="1.5" fill="#FEF08A"/>
+    </g>
+
+    <!-- Subtitle below Ryuk -->
+    <text x="140" y="315" text-anchor="middle" fill="#94A3B8" font-size="10.5" font-weight="700" class="font-mono">RYUK // SHINIGAMI</text>
+    <text x="140" y="328" text-anchor="middle" fill="#64748B" font-size="9" class="font-mono">"Choose your weapons wisely."</text>
+  </g>
+
+  <!-- ==================== RIGHT: 4 CATEGORIZED SKILL ROWS ==================== -->
+  <g transform="translate(320, 52)">
+
+    <!-- CATEGORY 1: LANGUAGES -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="14" fill="#FF1E27" font-size="10" font-weight="800" letter-spacing="1.2" class="font-mono">01 // SACRED LANGUAGES</text>
+      <line x1="160" y1="10" x2="615" y2="10" stroke="#251722" stroke-width="1"/>
+      
+      <g transform="translate(0, 24)">
+        <!-- Python -->
+        <g class="skill-group" transform="translate(0, 0)">
+          <rect x="0" y="0" width="94" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">🐍</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Python</text>
+        </g>
+        <!-- JavaScript -->
+        <g class="skill-group" transform="translate(104, 0)">
+          <rect x="0" y="0" width="108" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">⚡</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">JavaScript</text>
+        </g>
+        <!-- TypeScript -->
+        <g class="skill-group" transform="translate(222, 0)">
+          <rect x="0" y="0" width="112" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">🔷</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">TypeScript</text>
+        </g>
+        <!-- C / C++ -->
+        <g class="skill-group" transform="translate(344, 0)">
+          <rect x="0" y="0" width="85" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">⚙️</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">C / C++</text>
+        </g>
+        <!-- Go -->
+        <g class="skill-group" transform="translate(439, 0)">
+          <rect x="0" y="0" width="76" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">🐹</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Go</text>
+        </g>
+        <!-- Bash / Shell -->
+        <g class="skill-group" transform="translate(525, 0)">
+          <rect x="0" y="0" width="90" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">💻</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Bash</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- CATEGORY 2: CLOUD & INFRASTRUCTURE -->
+    <g transform="translate(0, 80)">
+      <text x="0" y="14" fill="#38BDF8" font-size="10" font-weight="800" letter-spacing="1.2" class="font-mono">02 // CLOUD &amp; SHINIGAMI INFRA</text>
+      <line x1="210" y1="10" x2="615" y2="10" stroke="#162330" stroke-width="1"/>
+      
+      <g transform="translate(0, 24)">
+        <!-- AWS -->
+        <g class="skill-group" transform="translate(0, 0)">
+          <rect x="0" y="0" width="92" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">☁️</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">AWS</text>
+        </g>
+        <!-- Terraform -->
+        <g class="skill-group" transform="translate(102, 0)">
+          <rect x="0" y="0" width="112" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">⬢</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Terraform</text>
+        </g>
+        <!-- Docker -->
+        <g class="skill-group" transform="translate(224, 0)">
+          <rect x="0" y="0" width="98" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">🐳</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Docker</text>
+        </g>
+        <!-- Kubernetes -->
+        <g class="skill-group" transform="translate(332, 0)">
+          <rect x="0" y="0" width="122" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">☸️</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Kubernetes</text>
+        </g>
+        <!-- Linux -->
+        <g class="skill-group" transform="translate(464, 0)">
+          <rect x="0" y="0" width="95" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">🐧</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Linux</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- CATEGORY 3: DEVOPS & OBSERVABILITY -->
+    <g transform="translate(0, 160)">
+      <text x="0" y="14" fill="#A855F7" font-size="10" font-weight="800" letter-spacing="1.2" class="font-mono">03 // OBSERVABILITY &amp; AUTOMATION</text>
+      <line x1="230" y1="10" x2="615" y2="10" stroke="#251630" stroke-width="1"/>
+      
+      <g transform="translate(0, 24)">
+        <!-- Prometheus -->
+        <g class="skill-group" transform="translate(0, 0)">
+          <rect x="0" y="0" width="124" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">📈</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Prometheus</text>
+        </g>
+        <!-- Grafana -->
+        <g class="skill-group" transform="translate(134, 0)">
+          <rect x="0" y="0" width="102" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">📊</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Grafana</text>
+        </g>
+        <!-- GitHub Actions -->
+        <g class="skill-group" transform="translate(246, 0)">
+          <rect x="0" y="0" width="144" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">🚀</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">GitHub Actions</text>
+        </g>
+        <!-- FastAPI -->
+        <g class="skill-group" transform="translate(400, 0)">
+          <rect x="0" y="0" width="102" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">⚡</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">FastAPI</text>
+        </g>
+        <!-- React -->
+        <g class="skill-group" transform="translate(512, 0)">
+          <rect x="0" y="0" width="98" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">⚛️</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">React</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- CATEGORY 4: STORAGE & PROTOCOLS -->
+    <g transform="translate(0, 240)">
+      <text x="0" y="14" fill="#34D399" font-size="10" font-weight="800" letter-spacing="1.2" class="font-mono">04 // DATABASES &amp; PROTOCOLS</text>
+      <line x1="200" y1="10" x2="615" y2="10" stroke="#12241F" stroke-width="1"/>
+      
+      <g transform="translate(0, 24)">
+        <!-- PostgreSQL -->
+        <g class="skill-group" transform="translate(0, 0)">
+          <rect x="0" y="0" width="124" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">🐘</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">PostgreSQL</text>
+        </g>
+        <!-- Supabase -->
+        <g class="skill-group" transform="translate(134, 0)">
+          <rect x="0" y="0" width="112" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">⚡</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Supabase</text>
+        </g>
+        <!-- Git & GitHub -->
+        <g class="skill-group" transform="translate(256, 0)">
+          <rect x="0" y="0" width="94" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">🌿</text>
+          <text x="32" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Git</text>
+        </g>
+        <!-- Postman -->
+        <g class="skill-group" transform="translate(360, 0)">
+          <rect x="0" y="0" width="110" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">📮</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Postman</text>
+        </g>
+        <!-- Prisma -->
+        <g class="skill-group" transform="translate(480, 0)">
+          <rect x="0" y="0" width="102" height="34" class="skill-pill"/>
+          <text x="10" y="22" font-size="13">▲</text>
+          <text x="30" y="22" fill="#E2E8F0" font-size="11" font-weight="700" class="font-sans">Prisma</text>
+        </g>
+      </g>
+    </g>
+
+  </g>
+</svg>
+

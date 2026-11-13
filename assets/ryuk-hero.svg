@@ -1,0 +1,296 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=JetBrains+Mono:wght@400;600;800&amp;family=Inter:wght@400;600;800;900&amp;display=swap');
+      .font-mono { font-family: 'JetBrains Mono', monospace; }
+      .font-sans { font-family: 'Inter', -apple-system, sans-serif; }
+      .font-gothic { font-family: 'Cinzel', serif; letter-spacing: 2px; }
+      
+      @keyframes eyeGlow {
+        0%, 100% { filter: drop-shadow(0 0 4px #FF1E27) drop-shadow(0 0 12px #FF1E27); opacity: 1; }
+        50% { filter: drop-shadow(0 0 8px #FF4D55) drop-shadow(0 0 20px #FF0015); opacity: 0.85; }
+      }
+      @keyframes appleFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(3deg); }
+      }
+      @keyframes auraPulse {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.05); }
+      }
+      @keyframes textGlow {
+        0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 30, 39, 0.4)); }
+        50% { filter: drop-shadow(0 0 16px rgba(255, 30, 39, 0.8)); }
+      }
+      .glowing-eye { animation: eyeGlow 2.5s infinite ease-in-out; }
+      .floating-apple { animation: appleFloat 3.5s infinite ease-in-out; transform-origin: 780px 240px; }
+      .pulsing-aura { animation: auraPulse 4s infinite ease-in-out; transform-origin: 760px 200px; }
+      .name-glow { animation: textGlow 3s infinite ease-in-out; }
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07070A"/>
+      <stop offset="50%" stop-color="#0C0D14"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+
+    <linearGradient id="crimsonBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF1E27"/>
+      <stop offset="35%" stop-color="#6B1118"/>
+      <stop offset="70%" stop-color="#2D0B10"/>
+      <stop offset="100%" stop-color="#FF1E27"/>
+    </linearGradient>
+
+    <radialGradient id="redAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF1E27" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#7A0B14" stop-opacity="0.25"/>
+      <stop offset="80%" stop-color="#1A0508" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#07070A" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="appleGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="40%" stop-color="#DC2626"/>
+      <stop offset="80%" stop-color="#991B1B"/>
+      <stop offset="100%" stop-color="#450A0A"/>
+    </radialGradient>
+
+    <radialGradient id="eyeGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFF55"/>
+      <stop offset="35%" stop-color="#FF3B30"/>
+      <stop offset="70%" stop-color="#CC0010"/>
+      <stop offset="100%" stop-color="#550005"/>
+    </radialGradient>
+
+    <linearGradient id="tagGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1F1318"/>
+      <stop offset="100%" stop-color="#141118"/>
+    </linearGradient>
+
+    <!-- Filter for ethereal glow -->
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Card Background -->
+  <rect x="2" y="2" width="956" height="396" rx="14" fill="url(#bgGrad)" stroke="url(#crimsonBorder)" stroke-width="1.8"/>
+
+  <!-- Subtle Chain & Mist Background Graphic -->
+  <g opacity="0.07" stroke="#FFFFFF" stroke-width="1" fill="none">
+    <path d="M 0 60 Q 240 100 480 60 T 960 60"/>
+    <path d="M 0 160 Q 240 200 480 160 T 960 160"/>
+    <path d="M 0 260 Q 240 300 480 260 T 960 260"/>
+    <path d="M 0 340 Q 240 380 480 340 T 960 340"/>
+  </g>
+
+  <!-- Titlebar -->
+  <path d="M 2 14 Q 2 2 14 2 L 946 2 Q 958 2 958 14 L 958 38 L 2 38 Z" fill="#0E0F17"/>
+  <line x1="2" y1="38" x2="958" y2="38" stroke="#26161B" stroke-width="1.2"/>
+
+  <!-- Titlebar Dots -->
+  <circle cx="22" cy="20" r="5" fill="#FF1E27"/>
+  <circle cx="38" cy="20" r="5" fill="#3A1C20"/>
+  <circle cx="54" cy="20" r="5" fill="#201618"/>
+
+  <!-- Titlebar Terminal Command -->
+  <text x="76" y="24" fill="#9CA3AF" font-size="11.5" font-weight="600" class="font-mono">himanshu@shinigami:~$ ./death_note --summon ryuk</text>
+
+  <!-- Titlebar Right Status -->
+  <g transform="translate(940, 24)" text-anchor="end">
+    <circle cx="-136" cy="-4" r="3.5" fill="#FF1E27" class="glowing-eye"/>
+    <text x="0" y="0" fill="#FF1E27" font-size="11" font-weight="700" letter-spacing="1" class="font-mono">● SHINIGAMI REALM [ONLINE]</text>
+  </g>
+
+  <!-- ==================== LEFT: DEVELOPER BIO & CODEX ==================== -->
+  <g transform="translate(40, 75)">
+    <!-- Subtitle Category Tag -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="190" height="24" rx="4" fill="#1C0E12" stroke="#4A141A" stroke-width="1"/>
+      <text x="12" y="16" fill="#FF4D55" font-size="10.5" font-weight="700" letter-spacing="1.5" class="font-mono">// DEATH NOTE HOLDER</text>
+    </g>
+
+    <!-- Main Title: Hi, I'm Himanshu Singh -->
+    <text x="0" y="56" fill="#8B949E" font-size="16" font-weight="700" class="font-mono">Hi, I'm</text>
+    <text x="0" y="96" fill="#F8FAFC" font-size="34" font-weight="900" letter-spacing="2" class="font-gothic name-glow">HIMANSHU SINGH</text>
+
+    <!-- Role Subtitle -->
+    <g transform="translate(0, 118)">
+      <text x="0" y="0" fill="#FF1E27" font-size="13" font-weight="800" class="font-mono">Cloud Architect</text>
+      <text x="120" y="0" fill="#4B5563" font-size="13" class="font-mono">•</text>
+      <text x="135" y="0" fill="#E2E8F0" font-size="13" font-weight="700" class="font-mono">DevOps Sorcerer</text>
+      <text x="268" y="0" fill="#4B5563" font-size="13" class="font-mono">•</text>
+      <text x="283" y="0" fill="#A855F7" font-size="13" font-weight="700" class="font-mono">Full-Stack Shinigami</text>
+    </g>
+
+    <!-- Lore Quote -->
+    <g transform="translate(0, 142)">
+      <rect x="0" y="0" width="460" height="54" rx="6" fill="#0F1018" stroke="#261E2E" stroke-width="1"/>
+      <line x1="0" y1="0" x2="0" y2="54" stroke="#FF1E27" stroke-width="3"/>
+      <text x="14" y="22" fill="#E2E8F0" font-size="11" font-style="italic" font-weight="500" class="font-mono">"The human whose code is written in this note shall deploy.</text>
+      <text x="14" y="40" fill="#94A3B8" font-size="10.5" font-style="italic" font-weight="500" class="font-mono">All bugs will be terminated within 40 seconds."  — Ryuk</text>
+    </g>
+
+    <!-- 4 Stats / Attribute Badges -->
+    <g transform="translate(0, 214)">
+      <!-- Badge 1: Apples -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="105" height="36" rx="6" fill="url(#tagGrad)" stroke="#3B1820" stroke-width="1"/>
+        <text x="10" y="23" font-size="14">🍎</text>
+        <text x="32" y="16" fill="#F8FAFC" font-size="11" font-weight="800" class="font-mono">Apples: ∞</text>
+        <text x="32" y="28" fill="#FF4D55" font-size="8.5" font-weight="600" class="font-mono">CRITICAL NEED</text>
+      </g>
+
+      <!-- Badge 2: Eyes -->
+      <g transform="translate(115, 0)">
+        <rect x="0" y="0" width="112" height="36" rx="6" fill="url(#tagGrad)" stroke="#3B1820" stroke-width="1"/>
+        <text x="10" y="23" font-size="13">👁️</text>
+        <text x="32" y="16" fill="#F8FAFC" font-size="11" font-weight="800" class="font-mono">Shinigami Eye</text>
+        <text x="32" y="28" fill="#A855F7" font-size="8.5" font-weight="600" class="font-mono">ACTIVE DEAL</text>
+      </g>
+
+      <!-- Badge 3: Note -->
+      <g transform="translate(237, 0)">
+        <rect x="0" y="0" width="105" height="36" rx="6" fill="url(#tagGrad)" stroke="#3B1820" stroke-width="1"/>
+        <text x="10" y="23" font-size="13">📓</text>
+        <text x="32" y="16" fill="#F8FAFC" font-size="11" font-weight="800" class="font-mono">Death Note</text>
+        <text x="32" y="28" fill="#34D399" font-size="8.5" font-weight="600" class="font-mono">INITIALIZED</text>
+      </g>
+
+      <!-- Badge 4: Commits -->
+      <g transform="translate(352, 0)">
+        <rect x="0" y="0" width="108" height="36" rx="6" fill="url(#tagGrad)" stroke="#3B1820" stroke-width="1"/>
+        <text x="10" y="23" font-size="13">⚡</text>
+        <text x="32" y="16" fill="#F8FAFC" font-size="11" font-weight="800" class="font-mono">263+ Spells</text>
+        <text x="32" y="28" fill="#38BDF8" font-size="8.5" font-weight="600" class="font-mono">COMMITS LOGGED</text>
+      </g>
+    </g>
+
+    <!-- CLI Status Ribbon -->
+    <g transform="translate(0, 268)">
+      <text x="0" y="14" fill="#6B7280" font-size="10.5" class="font-mono">$ ./shinigami_radar --target="Production AWS Clusters" --status="OPTIMAL"</text>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT: EPIC VECTOR RYUK ARTWORK ==================== -->
+  <g id="ryuk-illustration" transform="translate(520, 45)">
+    <!-- Crimson Aura Behind Ryuk -->
+    <circle cx="230" cy="170" r="150" fill="url(#redAura)" class="pulsing-aura"/>
+
+    <!-- Wing Shadows (Left & Right Feathers) -->
+    <g fill="#0A0B10" stroke="#1F202E" stroke-width="1.2">
+      <!-- Left Wing Feathers -->
+      <path d="M 160 140 C 90 90 20 110 0 160 C 30 180 80 170 120 190 C 70 210 20 250 10 290 C 50 280 100 250 140 240 Z"/>
+      <path d="M 130 160 C 70 130 20 160 5 210 C 35 220 70 200 110 210 Z" fill="#050608"/>
+      
+      <!-- Right Wing Feathers -->
+      <path d="M 300 140 C 370 90 440 110 460 160 C 430 180 380 170 340 190 C 390 210 440 250 450 290 C 410 280 360 250 320 240 Z"/>
+      <path d="M 330 160 C 390 130 440 160 455 210 C 425 220 390 200 350 210 Z" fill="#050608"/>
+    </g>
+
+    <!-- Torso / Feathery Shoulder Pads -->
+    <path d="M 170 240 C 180 200 280 200 290 240 C 310 290 320 340 330 350 L 130 350 C 140 340 150 290 170 240 Z" fill="#11131C" stroke="#252838" stroke-width="1.5"/>
+    <!-- Collar spikes / feathers -->
+    <path d="M 160 230 L 180 260 L 195 235 L 210 265 L 230 240 L 250 265 L 265 235 L 280 260 L 300 230 C 270 210 190 210 160 230 Z" fill="#181B26" stroke="#33374C" stroke-width="1.2"/>
+
+    <!-- Gothic Chains across torso -->
+    <path d="M 160 260 Q 230 310 300 260" fill="none" stroke="#64748B" stroke-width="2.5" stroke-dasharray="4 3"/>
+    <path d="M 150 290 Q 230 345 310 290" fill="none" stroke="#64748B" stroke-width="2" stroke-dasharray="4 3"/>
+    <!-- Heart / Skull Buckle on chest -->
+    <circle cx="230" cy="295" r="9" fill="#1E2330" stroke="#94A3B8" stroke-width="1.5"/>
+    <circle cx="227" cy="293" r="1.5" fill="#FFFFFF"/>
+    <circle cx="233" cy="293" r="1.5" fill="#FFFFFF"/>
+    <path d="M 226 298 L 234 298" stroke="#94A3B8" stroke-width="1"/>
+
+    <!-- Ryuk Head & Face -->
+    <!-- Neck -->
+    <path d="M 205 190 L 210 235 L 250 235 L 255 190 Z" fill="#9CA3AF"/>
+    <!-- Chin / Jaw -->
+    <path d="M 180 145 C 180 210 210 225 230 225 C 250 225 280 210 280 145 C 280 110 255 105 230 105 C 205 105 180 110 180 145 Z" fill="#D1D5DB" stroke="#4B5563" stroke-width="1.5"/>
+
+    <!-- Ryuk Spiky Wild Black Hair -->
+    <path d="M 180 130 L 160 100 L 175 110 L 160 75 L 185 90 L 180 55 L 205 78 L 215 45 L 230 75 L 245 45 L 255 78 L 280 55 L 275 90 L 300 75 L 285 110 L 300 100 L 280 130 C 270 95 190 95 180 130 Z" fill="#0A0B10" stroke="#1F2430" stroke-width="1.5"/>
+    <!-- Hair purple edge highlights -->
+    <path d="M 165 102 L 178 112 M 165 77 L 187 92 M 183 58 L 207 80 M 218 48 L 231 77 M 247 48 L 257 80 M 278 58 L 273 92 M 297 77 L 283 112" stroke="#7C3AED" stroke-width="1.2"/>
+
+    <!-- Left Earring (Silver Ring) -->
+    <circle cx="178" cy="155" r="5" fill="none" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- Ryuk's Enormous Menacing Grin with Razor Teeth -->
+    <!-- Lip Outline -->
+    <path d="M 188 165 C 200 205 260 205 272 165 C 255 188 205 188 188 165 Z" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    <!-- Teeth Row -->
+    <g fill="#F3F4F6" stroke="#111827" stroke-width="0.8">
+      <!-- Upper Teeth -->
+      <polygon points="194,170 197,177 200,170"/>
+      <polygon points="200,171 204,180 208,171"/>
+      <polygon points="208,172 213,182 218,172"/>
+      <polygon points="218,173 224,184 230,173"/>
+      <polygon points="230,173 236,184 242,173"/>
+      <polygon points="242,172 247,182 252,172"/>
+      <polygon points="252,171 256,180 260,171"/>
+      <polygon points="260,170 263,177 266,170"/>
+      <!-- Lower Teeth -->
+      <polygon points="196,182 200,176 204,182"/>
+      <polygon points="205,185 210,178 215,185"/>
+      <polygon points="216,187 222,179 228,187"/>
+      <polygon points="232,187 238,179 244,187"/>
+      <polygon points="245,185 250,178 255,185"/>
+      <polygon points="256,182 260,176 264,182"/>
+    </g>
+
+    <!-- Blue/Grey facial contour & shadow lines -->
+    <path d="M 230 140 L 227 155 L 233 155 Z" fill="#6B7280"/>
+    <path d="M 190 135 C 195 145 205 145 210 138" fill="none" stroke="#6B7280" stroke-width="1.2"/>
+    <path d="M 250 138 C 255 145 265 145 270 135" fill="none" stroke="#6B7280" stroke-width="1.2"/>
+
+    <!-- Ryuk's Piercing Shinigami Eyes (Glowing Gold & Blood Red) -->
+    <!-- Left Eye -->
+    <g class="glowing-eye">
+      <circle cx="205" cy="132" r="11" fill="#1C1917" stroke="#FF1E27" stroke-width="1.5"/>
+      <circle cx="205" cy="132" r="8" fill="url(#eyeGrad)"/>
+      <circle cx="205" cy="132" r="3.5" fill="#050505"/>
+      <circle cx="207" cy="130" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Right Eye -->
+    <g class="glowing-eye">
+      <circle cx="255" cy="132" r="11" fill="#1C1917" stroke="#FF1E27" stroke-width="1.5"/>
+      <circle cx="255" cy="132" r="8" fill="url(#eyeGrad)"/>
+      <circle cx="255" cy="132" r="3.5" fill="#050505"/>
+      <circle cx="257" cy="130" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Floating / Hovering Red Apple with Bite & Stem -->
+    <g class="floating-apple" transform="translate(320, 180)">
+      <!-- Apple Glow Aura -->
+      <circle cx="26" cy="26" r="28" fill="#FF1E27" opacity="0.3" filter="url(#glowFilter)"/>
+
+      <!-- Apple Body -->
+      <path d="M 26 8 C 12 8 2 18 2 30 C 2 44 14 52 26 50 C 38 52 50 44 50 30 C 50 18 40 8 26 8 Z" fill="url(#appleGrad)" stroke="#7F1D1D" stroke-width="1"/>
+      
+      <!-- Apple Indent & Stem -->
+      <path d="M 26 8 Q 28 2 35 0 Q 32 3 27 9" fill="#15803D" stroke="#166534" stroke-width="0.8"/>
+      <path d="M 26 8 Q 23 2 20 1" stroke="#451A03" stroke-width="2" fill="none"/>
+
+      <!-- Apple Highlight -->
+      <ellipse cx="18" cy="20" rx="6" ry="10" transform="rotate(-25 18 20)" fill="#FFA4A4" opacity="0.55"/>
+
+      <!-- Bite Mark (Demonstrating Ryuk took a bite) -->
+      <path d="M 44 22 C 38 25 38 35 44 38 C 42 36 40 32 42 27 C 43 24 44 23 44 22 Z" fill="#07070A"/>
+      <path d="M 44 22 C 38 25 38 35 44 38" stroke="#FEF08A" stroke-width="1.5" fill="none"/>
+    </g>
+
+    <!-- Death Note Flying / Hovering near hand -->
+    <g transform="translate(100, 260) rotate(-15)">
+      <rect x="0" y="0" width="46" height="60" rx="3" fill="#0A0A0E" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="23" y="24" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-family="'Cinzel', serif" font-weight="900" letter-spacing="1">DEATH</text>
+      <text x="23" y="34" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-family="'Cinzel', serif" font-weight="900" letter-spacing="1">NOTE</text>
+      <!-- Page edges -->
+      <line x1="43" y1="4" x2="43" y2="56" stroke="#475569" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
+

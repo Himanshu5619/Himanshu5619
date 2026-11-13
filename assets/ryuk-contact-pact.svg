@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=JetBrains+Mono:wght@500;700;800&amp;family=Inter:wght@600;700;800&amp;display=swap');
+      .font-mono { font-family: 'JetBrains Mono', monospace; }
+      .font-sans { font-family: 'Inter', -apple-system, sans-serif; }
+      .font-gothic { font-family: 'Cinzel', serif; }
+
+      @keyframes eyeShinePact {
+        0%, 100% { filter: drop-shadow(0 0 4px #FF1E27); opacity: 1; }
+        50% { filter: drop-shadow(0 0 10px #FF1E27); opacity: 0.75; }
+      }
+      @keyframes floatApplePact {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-5px) rotate(4deg); }
+      }
+      .pact-eye { animation: eyeShinePact 2s infinite ease-in-out; }
+      .pact-apple { animation: floatApplePact 3s infinite ease-in-out; transform-origin: 190px 145px; }
+
+      .pact-btn {
+        rx: 6;
+        fill: #131422;
+        stroke: #2E1B28;
+        stroke-width: 1.2;
+        transition: all 0.25s ease;
+        cursor: pointer;
+      }
+      .pact-btn-group:hover .pact-btn {
+        fill: #221424;
+        stroke: #FF1E27;
+        filter: drop-shadow(0 0 8px rgba(255, 30, 39, 0.4));
+      }
+    </style>
+
+    <linearGradient id="pactBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08080C"/>
+      <stop offset="50%" stop-color="#120D18"/>
+      <stop offset="100%" stop-color="#060609"/>
+    </linearGradient>
+
+    <linearGradient id="pactBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF1E27"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#FF1E27"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="956" height="256" rx="14" fill="url(#pactBg)" stroke="url(#pactBorder)" stroke-width="1.5"/>
+
+  <!-- ==================== LEFT: RYUK SITTING IN SHADOWS WITH GLOWING APPLE ==================== -->
+  <g transform="translate(40, 20)">
+    <!-- Red Eclipse Moon behind Ryuk -->
+    <circle cx="120" cy="110" r="75" fill="#1C0A12" stroke="#7F1D1D" stroke-width="1.2"/>
+
+    <!-- Wing Shadows -->
+    <path d="M 100 80 C 40 40 0 60 -10 100 C 20 110 50 105 80 115 C 30 135 10 170 5 195 C 40 185 70 170 100 160 Z" fill="#0C0E14" stroke="#25293A" stroke-width="1"/>
+    <path d="M 140 80 C 200 40 240 60 250 100 C 220 110 190 105 160 115 C 210 135 230 170 235 195 C 200 185 170 170 140 160 Z" fill="#0C0E14" stroke="#25293A" stroke-width="1"/>
+
+    <!-- Ryuk Crouched Torso -->
+    <path d="M 80 150 C 90 120 150 120 160 150 L 175 220 L 65 220 Z" fill="#11131E" stroke="#2E334D" stroke-width="1.2"/>
+    <path d="M 75 145 L 90 170 L 105 150 L 120 175 L 135 150 L 150 170 L 165 145 Z" fill="#181B28" stroke="#7C3AED" stroke-width="1"/>
+
+    <!-- Face & Neck -->
+    <path d="M 108 115 L 112 140 L 128 140 L 132 115 Z" fill="#9CA3AF"/>
+    <ellipse cx="120" cy="95" rx="14" ry="16" fill="#D1D5DB" stroke="#4B5563" stroke-width="1.2"/>
+
+    <!-- Spiky Hair -->
+    <path d="M 106 88 L 88 65 L 102 75 L 94 48 L 110 65 L 115 38 L 125 58 L 135 38 L 140 65 L 156 48 L 148 75 L 162 65 L 144 88 Z" fill="#0A0B10" stroke="#7C3AED" stroke-width="1"/>
+
+    <!-- Glowing Red Shinigami Eyes -->
+    <circle cx="114" cy="92" r="4.5" fill="#FF1E27" class="pact-eye"/>
+    <circle cx="114" cy="92" r="1.8" fill="#FEF08A"/>
+    <circle cx="126" cy="92" r="4.5" fill="#FF1E27" class="pact-eye"/>
+    <circle cx="126" cy="92" r="1.8" fill="#FEF08A"/>
+
+    <!-- Menacing Tooth Grin -->
+    <path d="M 110 105 Q 120 115 130 105" fill="#111827" stroke="#111827" stroke-width="1"/>
+    <polygon points="113,105 115,109 117,105" fill="#FFFFFF"/>
+    <polygon points="119,106 121,111 123,106" fill="#FFFFFF"/>
+    <polygon points="124,105 126,109 128,105" fill="#FFFFFF"/>
+
+    <!-- Floating Apple In Foreground -->
+    <g class="pact-apple" transform="translate(145, 120)">
+      <circle cx="14" cy="14" r="14" fill="#DC2626" stroke="#7F1D1D" stroke-width="1"/>
+      <path d="M 14 3 Q 17 -1 21 0" stroke="#16A34A" stroke-width="1.5" fill="none"/>
+      <ellipse cx="10" cy="10" rx="3.5" ry="6" fill="#FCA5A5" opacity="0.6"/>
+      <!-- Radiating Apple Sparkle -->
+      <circle cx="2" cy="6" r="1.5" fill="#FEF08A"/>
+      <circle cx="26" cy="22" r="1.5" fill="#FEF08A"/>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT: PACT SUMMONING PORTAL ==================== -->
+  <g transform="translate(330, 24)">
+    
+    <!-- Header -->
+    <text x="0" y="20" fill="#FF1E27" font-size="12" font-weight="900" letter-spacing="2" class="font-gothic">// SEAL THE PACT // LET'S BUILD SOMETHING LEGENDARY</text>
+    <text x="0" y="42" fill="#94A3B8" font-size="11" font-weight="500" class="font-mono">Drop a transmission, feed an apple, or collaborate on cloud architecture.</text>
+
+    <!-- 4 Connection Portals / Grid of 2x2 -->
+    <g transform="translate(0, 60)">
+      
+      <!-- Button 1: GitHub -->
+      <g class="pact-btn-group" transform="translate(0, 0)">
+        <rect x="0" y="0" width="280" height="48" class="pact-btn"/>
+        <text x="16" y="30" font-size="16">🐙</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="12" font-weight="700" class="font-mono">GITHUB REPOSITORIES</text>
+        <text x="44" y="37" fill="#64748B" font-size="10" class="font-mono">github.com/Himanshu5619</text>
+        <text x="260" y="30" text-anchor="end" fill="#FF1E27" font-size="14">➔</text>
+      </g>
+
+      <!-- Button 2: LinkedIn -->
+      <g class="pact-btn-group" transform="translate(305, 0)">
+        <rect x="0" y="0" width="280" height="48" class="pact-btn"/>
+        <text x="16" y="30" font-size="16">💼</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="12" font-weight="700" class="font-mono">LINKEDIN NETWORK</text>
+        <text x="44" y="37" fill="#64748B" font-size="10" class="font-mono">in/himanshu-singh-b3aa71218</text>
+        <text x="260" y="30" text-anchor="end" fill="#38BDF8" font-size="14">➔</text>
+      </g>
+
+      <!-- Button 3: Email -->
+      <g class="pact-btn-group" transform="translate(0, 60)">
+        <rect x="0" y="0" width="280" height="48" class="pact-btn"/>
+        <text x="16" y="30" font-size="16">⚡</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="12" font-weight="700" class="font-mono">ENCRYPTED DISPATCH</text>
+        <text x="44" y="37" fill="#64748B" font-size="10" class="font-mono">himanshu.s19@proton.me</text>
+        <text x="260" y="30" text-anchor="end" fill="#A855F7" font-size="14">➔</text>
+      </g>
+
+      <!-- Button 4: Portfolio -->
+      <g class="pact-btn-group" transform="translate(305, 60)">
+        <rect x="0" y="0" width="280" height="48" class="pact-btn"/>
+        <text x="16" y="30" font-size="16">🌐</text>
+        <text x="44" y="22" fill="#F8FAFC" font-size="12" font-weight="700" class="font-mono">WEB PORTFOLIO</text>
+        <text x="44" y="37" fill="#64748B" font-size="10" class="font-mono">himanshu5619.github.io</text>
+        <text x="260" y="30" text-anchor="end" fill="#34D399" font-size="14">➔</text>
+      </g>
+    </g>
+
+    <!-- Bottom Ryuk Dialogue -->
+    <g transform="translate(0, 195)">
+      <text x="0" y="14" fill="#E2E8F0" font-size="11" font-style="italic" class="font-mono">"Humans are... so interesting! Let's build something impossible." — Ryuk 🍎</text>
+    </g>
+  </g>
+</svg>
+

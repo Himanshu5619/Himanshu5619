@@ -1,0 +1,310 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&amp;family=JetBrains+Mono:wght@500;700;800&amp;family=Inter:wght@600;700;800;900&amp;display=swap');
+      .font-mono { font-family: 'JetBrains Mono', monospace; }
+      .font-sans { font-family: 'Inter', -apple-system, sans-serif; }
+      .font-gothic { font-family: 'Cinzel', serif; }
+
+      @keyframes eyeShine {
+        0%, 100% { filter: drop-shadow(0 0 3px #FF1E27); opacity: 1; }
+        50% { filter: drop-shadow(0 0 8px #FF1E27); opacity: 0.8; }
+      }
+      .eye-pulse { animation: eyeShine 2s infinite ease-in-out; }
+
+      #hanging-id-card {
+        transform-origin: 155px 35px;
+        transition: filter 0.3s ease;
+      }
+      #hanging-id-card:hover {
+        filter: drop-shadow(0 4px 20px rgba(255, 30, 39, 0.4));
+      }
+
+      .stat-counter-card {
+        fill: #11131E;
+        stroke: #261E2E;
+        stroke-width: 1.2;
+        rx: 8;
+        transition: all 0.25s ease;
+      }
+      .stat-counter-card:hover {
+        fill: #1A1526;
+        stroke: #FF1E27;
+        filter: drop-shadow(0 0 8px rgba(255, 30, 39, 0.3));
+      }
+    </style>
+
+    <linearGradient id="dossierBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07070A"/>
+      <stop offset="50%" stop-color="#0E0F17"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+
+    <!-- Blood Red Lanyard Gradient -->
+    <linearGradient id="lanyardRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#991B1B"/>
+      <stop offset="50%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </linearGradient>
+
+    <linearGradient id="idCardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF1E27"/>
+      <stop offset="50%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+
+    <linearGradient id="progGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF1E27"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+
+    <linearGradient id="progGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <linearGradient id="progGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <linearGradient id="progGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="956" height="436" rx="14" fill="url(#dossierBg)" stroke="#381B26" stroke-width="1.5"/>
+
+  <!-- ==================== LEFT: HANGING DEATH NOTE ID BADGE ==================== -->
+  <!-- Lanyard Ribbon from top ceiling -->
+  <path d="M 145 0 L 145 35 L 165 35 L 165 0 Z" fill="url(#lanyardRibbon)"/>
+  
+  <g id="hanging-id-card">
+    <!-- Gentle Swaying Physics Animation -->
+    <animateTransform attributeName="transform" type="rotate"
+      values="-2.2; 2.2; -2.2"
+      dur="5s"
+      repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.45 0.05 0.55 0.95; 0.45 0.05 0.55 0.95"/>
+
+    <!-- Metallic Clip Assembly -->
+    <g transform="translate(140, 32)">
+      <!-- Silver Clip -->
+      <rect x="0" y="0" width="30" height="12" rx="3" fill="#64748B" stroke="#94A3B8" stroke-width="1"/>
+      <rect x="8" y="10" width="14" height="16" rx="2" fill="#475569" stroke="#94A3B8" stroke-width="0.8"/>
+      <!-- Hole in badge -->
+      <ellipse cx="15" cy="24" rx="4" ry="2" fill="#0B0C14"/>
+    </g>
+
+    <!-- Badge Card Body (220 width, 330 height) -->
+    <g transform="translate(45, 54)">
+      <!-- Outer Card Shield -->
+      <rect x="0" y="0" width="220" height="340" rx="12" fill="#0D0E17" stroke="url(#idCardBorder)" stroke-width="1.8"/>
+      
+      <!-- Top Death Note Red Band -->
+      <path d="M 0 12 Q 0 0 12 0 L 208 0 Q 220 0 220 12 L 220 38 L 0 38 Z" fill="#200B12"/>
+      <line x1="0" y1="38" x2="220" y2="38" stroke="#FF1E27" stroke-width="1"/>
+      
+      <text x="110" y="24" text-anchor="middle" fill="#FFFFFF" font-size="11" font-weight="900" letter-spacing="2" class="font-gothic">DEATH NOTE // TASK FORCE</text>
+
+      <!-- Ryuk Shinigami Portrait Frame -->
+      <g transform="translate(30, 48)">
+        <!-- Photo Outer Border -->
+        <rect x="0" y="0" width="160" height="150" rx="8" fill="#07080C" stroke="#371B26" stroke-width="1.2"/>
+        
+        <!-- Portrait Artwork -->
+        <g transform="translate(80, 75)">
+          <!-- Crimson Moon -->
+          <circle cx="0" cy="0" r="42" fill="#180A10" stroke="#7F1D1D" stroke-width="1"/>
+          <!-- Wings -->
+          <path d="M -15 0 C -35 -20 -60 -10 -70 10 C -50 15 -30 15 -10 10 Z" fill="#0B0C12"/>
+          <path d="M 15 0 C 35 -20 60 -10 70 10 C 50 15 30 15 10 10 Z" fill="#0B0C12"/>
+          <!-- Ryuk Body -->
+          <path d="M -15 20 C -12 5 12 5 15 20 L 20 45 L -20 45 Z" fill="#11131C"/>
+          <!-- Face -->
+          <ellipse cx="0" cy="-2" rx="14" ry="16" fill="#D1D5DB"/>
+          <!-- Wild Hair -->
+          <path d="M -14 -10 L -22 -22 L -12 -16 L -5 -28 L 0 -18 L 5 -28 L 12 -16 L 22 -22 L 14 -10 Z" fill="#0A0B10"/>
+          <!-- Eyes -->
+          <circle cx="-5" cy="-5" r="3.5" fill="#FF1E27" class="eye-pulse"/>
+          <circle cx="-5" cy="-5" r="1.5" fill="#FEF08A"/>
+          <circle cx="5" cy="-5" r="3.5" fill="#FF1E27" class="eye-pulse"/>
+          <circle cx="5" cy="-5" r="1.5" fill="#FEF08A"/>
+          <!-- Grin -->
+          <path d="M -8 3 Q 0 10 8 3" fill="#111827" stroke="#111827" stroke-width="0.5"/>
+          <polygon points="-5,3 -3,6 -1,3" fill="#FFFFFF"/>
+          <polygon points="-1,3 1,7 3,3" fill="#FFFFFF"/>
+          <polygon points="3,3 5,6 7,3" fill="#FFFFFF"/>
+          
+          <!-- Red Apple near chin -->
+          <circle cx="16" cy="18" r="8" fill="#DC2626"/>
+          <ellipse cx="14" cy="16" rx="2" ry="4" fill="#FCA5A5" opacity="0.6"/>
+        </g>
+
+        <!-- Status overlay pill -->
+        <rect x="8" y="125" width="144" height="18" rx="3" fill="#0F101A" opacity="0.9"/>
+        <text x="80" y="137" text-anchor="middle" fill="#34D399" font-size="8.5" font-weight="700" class="font-mono">SHINIGAMI EYE DEAL: ACTIVE</text>
+      </g>
+
+      <!-- Badge Text Details -->
+      <g transform="translate(20, 212)">
+        <text x="0" y="0" fill="#64748B" font-size="8.5" font-weight="600" class="font-mono">OPERATIVE IDENTITY</text>
+        <text x="0" y="16" fill="#F8FAFC" font-size="14" font-weight="900" letter-spacing="1" class="font-gothic">HIMANSHU SINGH</text>
+        
+        <text x="0" y="32" fill="#FF4D55" font-size="9.5" font-weight="700" class="font-mono">Cloud &amp; DevOps Shinigami</text>
+
+        <!-- Metadata Grid -->
+        <g transform="translate(0, 44)">
+          <text x="0" y="0" fill="#64748B" font-size="8" class="font-mono">ID CODE:</text>
+          <text x="50" y="0" fill="#E2E8F0" font-size="8.5" font-weight="700" class="font-mono">DN-RYUK-5619</text>
+
+          <text x="0" y="14" fill="#64748B" font-size="8" class="font-mono">LIFESPAN:</text>
+          <text x="50" y="14" fill="#E2E8F0" font-size="8.5" font-weight="700" class="font-mono">999,999 COMMITS</text>
+
+          <text x="0" y="28" fill="#64748B" font-size="8" class="font-mono">REALM:</text>
+          <text x="50" y="28" fill="#A855F7" font-size="8.5" font-weight="700" class="font-mono">HUMAN / AWS CLOUD</text>
+        </g>
+
+        <!-- Barcode Graphic at bottom of badge -->
+        <g transform="translate(0, 84)">
+          <line x1="0" y1="0" x2="0" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="4" y1="0" x2="4" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="7" y1="0" x2="7" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="13" y1="0" x2="13" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="16" y1="0" x2="16" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="21" y1="0" x2="21" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="25" y1="0" x2="25" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="31" y1="0" x2="31" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="36" y1="0" x2="36" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="40" y1="0" x2="40" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="45" y1="0" x2="45" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="51" y1="0" x2="51" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="55" y1="0" x2="55" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="60" y1="0" x2="60" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="66" y1="0" x2="66" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="70" y1="0" x2="70" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="75" y1="0" x2="75" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="80" y1="0" x2="80" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="86" y1="0" x2="86" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="90" y1="0" x2="90" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="95" y1="0" x2="95" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="100" y1="0" x2="100" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="106" y1="0" x2="106" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="112" y1="0" x2="112" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="116" y1="0" x2="116" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="122" y1="0" x2="122" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="126" y1="0" x2="126" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="131" y1="0" x2="131" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="135" y1="0" x2="135" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="141" y1="0" x2="141" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="146" y1="0" x2="146" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="150" y1="0" x2="150" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="155" y1="0" x2="155" y2="18" stroke="#FFFFFF" stroke-width="3"/>
+          <line x1="161" y1="0" x2="161" y2="18" stroke="#FFFFFF" stroke-width="1"/>
+          <line x1="165" y1="0" x2="165" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+          <line x1="170" y1="0" x2="170" y2="18" stroke="#FFFFFF" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT: STATS FROM THE FIELD DASHBOARD ==================== -->
+  <g transform="translate(305, 30)">
+    
+    <!-- Titlebar & Terminal Header -->
+    <text x="0" y="16" fill="#FF1E27" font-size="11" font-weight="900" letter-spacing="1.5" class="font-gothic">// MISSION DASHBOARD // STATS FROM THE FIELD</text>
+    <text x="630" y="16" text-anchor="end" fill="#64748B" font-size="10.5" font-weight="600" class="font-mono">[ ARC: HUMAN CLOUD DEPLOYMENTS ]</text>
+    <line x1="0" y1="28" x2="630" y2="28" stroke="#2B1A24" stroke-width="1.2"/>
+
+    <!-- 4 Main Metric Counters (Row) -->
+    <g transform="translate(0, 42)">
+      
+      <!-- Metric 1: Repositories -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="144" height="64" class="stat-counter-card"/>
+        <text x="14" y="24" fill="#94A3B8" font-size="10" font-weight="700" class="font-mono">REPOSITORIES</text>
+        <text x="14" y="52" fill="#F8FAFC" font-size="24" font-weight="900" class="font-sans">29+</text>
+        <text x="120" y="52" text-anchor="end" font-size="20">📦</text>
+      </g>
+
+      <!-- Metric 2: Stars -->
+      <g transform="translate(162, 0)">
+        <rect x="0" y="0" width="144" height="64" class="stat-counter-card"/>
+        <text x="14" y="24" fill="#94A3B8" font-size="10" font-weight="700" class="font-mono">STARS EARNED</text>
+        <text x="14" y="52" fill="#F8FAFC" font-size="24" font-weight="900" class="font-sans">3+</text>
+        <text x="120" y="52" text-anchor="end" font-size="20">⭐</text>
+      </g>
+
+      <!-- Metric 3: Contributions -->
+      <g transform="translate(324, 0)">
+        <rect x="0" y="0" width="144" height="64" class="stat-counter-card"/>
+        <text x="14" y="24" fill="#94A3B8" font-size="10" font-weight="700" class="font-mono">CONTRIBUTIONS</text>
+        <text x="14" y="52" fill="#F8FAFC" font-size="24" font-weight="900" class="font-sans">263+</text>
+        <text x="120" y="52" text-anchor="end" font-size="20">⚡</text>
+      </g>
+
+      <!-- Metric 4: Apples -->
+      <g transform="translate(486, 0)">
+        <rect x="0" y="0" width="144" height="64" class="stat-counter-card"/>
+        <text x="14" y="24" fill="#94A3B8" font-size="10" font-weight="700" class="font-mono">APPLES CONSUMED</text>
+        <text x="14" y="52" fill="#EF4444" font-size="24" font-weight="900" class="font-sans">∞</text>
+        <text x="120" y="52" text-anchor="end" font-size="20">🍎</text>
+      </g>
+    </g>
+
+    <!-- Field Activity & Power Bars -->
+    <g transform="translate(0, 130)">
+      <text x="0" y="0" fill="#E2E8F0" font-size="12" font-weight="800" class="font-mono">TACTICAL PROFICIENCY &amp; SHINIGAMI POWERS</text>
+      
+      <!-- Skill Bar 1: Cloud & AWS Architecture -->
+      <g transform="translate(0, 16)">
+        <text x="0" y="12" fill="#94A3B8" font-size="10" font-weight="600" class="font-mono">Cloud Architecture &amp; AWS Infrastructure</text>
+        <text x="630" y="12" text-anchor="end" fill="#FF1E27" font-size="10.5" font-weight="800" class="font-mono">95%</text>
+        <rect x="0" y="20" width="630" height="8" rx="4" fill="#151724"/>
+        <rect x="0" y="20" width="598" height="8" rx="4" fill="url(#progGrad1)"/>
+      </g>
+
+      <!-- Skill Bar 2: Terraform & IaC Automation -->
+      <g transform="translate(0, 56)">
+        <text x="0" y="12" fill="#94A3B8" font-size="10" font-weight="600" class="font-mono">Terraform &amp; Infrastructure as Code (IaC)</text>
+        <text x="630" y="12" text-anchor="end" fill="#A855F7" font-size="10.5" font-weight="800" class="font-mono">92%</text>
+        <rect x="0" y="20" width="630" height="8" rx="4" fill="#151724"/>
+        <rect x="0" y="20" width="580" height="8" rx="4" fill="url(#progGrad2)"/>
+      </g>
+
+      <!-- Skill Bar 3: Docker & Microservices -->
+      <g transform="translate(0, 96)">
+        <text x="0" y="12" fill="#94A3B8" font-size="10" font-weight="600" class="font-mono">Docker Containerization &amp; Kubernetes</text>
+        <text x="630" y="12" text-anchor="end" fill="#38BDF8" font-size="10.5" font-weight="800" class="font-mono">90%</text>
+        <rect x="0" y="20" width="630" height="8" rx="4" fill="#151724"/>
+        <rect x="0" y="20" width="567" height="8" rx="4" fill="url(#progGrad3)"/>
+      </g>
+
+      <!-- Skill Bar 4: Prometheus & Grafana Observability -->
+      <g transform="translate(0, 136)">
+        <text x="0" y="12" fill="#94A3B8" font-size="10" font-weight="600" class="font-mono">Prometheus &amp; Grafana Observability / Alerting</text>
+        <text x="630" y="12" text-anchor="end" fill="#34D399" font-size="10.5" font-weight="800" class="font-mono">88%</text>
+        <rect x="0" y="20" width="630" height="8" rx="4" fill="#151724"/>
+        <rect x="0" y="20" width="554" height="8" rx="4" fill="url(#progGrad4)"/>
+      </g>
+
+      <!-- Skill Bar 5: Bug Termination Velocity (Within 40 Seconds) -->
+      <g transform="translate(0, 176)">
+        <text x="0" y="12" fill="#94A3B8" font-size="10" font-weight="600" class="font-mono">Bug Termination Velocity (Under 40s SLA)</text>
+        <text x="630" y="12" text-anchor="end" fill="#FF4D55" font-size="10.5" font-weight="800" class="font-mono">99%</text>
+        <rect x="0" y="20" width="630" height="8" rx="4" fill="#151724"/>
+        <rect x="0" y="20" width="624" height="8" rx="4" fill="url(#progGrad1)"/>
+      </g>
+    </g>
+
+    <!-- Bottom Status Log -->
+    <g transform="translate(0, 360)">
+      <line x1="0" y1="0" x2="630" y2="0" stroke="#251A24" stroke-width="1"/>
+      <text x="0" y="20" fill="#64748B" font-size="10" class="font-mono">$ ./shinigami_ops --status="ALL REPOSITORIES REVILED UNDER STRICT QUALITY GATES"</text>
+    </g>
+  </g>
+</svg>
+
